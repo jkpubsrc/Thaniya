@@ -1,0 +1,69 @@
+{
+	"magic": {
+		"magic": "packageinfo",
+		"version": 2,
+	},
+	"meta": {
+		"name": "thaniya_server_sudo",
+		"version": "0.2021.1.18",
+		"packageClass": "python-module",
+		"language": "python3",
+		"development_status": "alpha",
+		"license": "Apache2",
+		"keywords": [
+			"sudo",
+			"thaniya",
+		],
+		"description": "This python module is part of the Thaniya server. It provides a way to run scripts via sudo in a controlled way.",
+		"authors": [
+			{
+				"name": "Jürgen Knauth",
+				"email": "pubsrc@binary-overflow.de"
+			}
+		],
+	},
+	"requirements": {
+		"python_packages": [
+			"jk_json",
+			"jk_logging",
+			"jk_prettyprintobj",
+			"jk_typing",
+			"jk_utils",
+		],
+		"python_packages_dev": [
+		],
+		"system_apt_packages": [
+			"jq",
+		],
+	},
+	"source": {
+		"packages": [
+			"thaniya_server_sudo"
+		],
+		"extra_data_files": [
+		],
+		"extra_binary_files": [
+		]
+	},
+	"documentation": [
+		/*
+		"wiki": {
+			"page": "DevDocs:thaniya_server_sudo"
+		}
+		*/
+	],
+	"repositories": [
+		{
+			"type": "github",
+			"user": "jkpubsrc",
+			"project": "........",
+			"devon_publish": false
+		},
+		{
+			"type": "pypi",
+			"project": "........",
+			"devon_publish": false
+		}
+	],
+}
+

@@ -1,0 +1,15 @@
+{
+	"data": {
+		"tBackupStart": 1608290014.423183,
+		"tBackupEnd": 1608286417.623469,
+		"sizeInBytes": 12378112,
+		"dClientBackupDuration": 1.199193716,
+		"systemName": "selenium",
+		"backupUserName": "woodoo",
+		"backupIdentifier": "fooBar"
+	},
+	"magic": {
+		"magic": "thaniya-backup-info",
+		"version": 1
+	}
+}

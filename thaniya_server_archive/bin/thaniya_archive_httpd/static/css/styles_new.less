@@ -1,0 +1,846 @@
+// ################################################################################################################################
+// #### Essential global settings
+
+//@colBGRefColor: #002f38;
+@colBGRefColor: #00242B;
+@colText: #e0f0ff;
+
+
+
+
+
+@page_bgColor: darken(@colBGRefColor, 2.7%);			// the page color
+
+@grooveColor: lighten(@page_bgColor, 4%);				// this is the color of the small groove that is put around sharp edge page boxes
+
+@navBar_bgColor: @colBGRefColor;
+@navBar_height: 4rem;
+@navBar_fgColor: @colText;
+@navBar_logo_borderWidth: 10px;
+@navBar_item_minWidth: 5rem;			// the minimum width of a navbar menu item
+@navBar_item_bgColor: lighten(@colBGRefColor, 3%);
+@navBar_item_borderWidth: 10px;
+
+@topBar_bgColor: darken(@page_bgColor, 1%);
+@topBar_fgColor: @colText;
+
+@gapBarRight_bgColor: darken(@page_bgColor, 1%);
+@gapBarRight_width: 40px;
+
+@sideBarRight_bgColor: @page_bgColor;
+@sideBarRight_fgColor: @colText;
+@sideBarRight_minWidth: 5rem;
+
+@footer_bgColor: @colBGRefColor;
+@footer_minHeight: 1rem;
+@footer_borderWidth: 20px;
+@footer_fgColor: average(@colText, @colBGRefColor);
+
+@main_paddingTop: 20px;
+@main_paddingLeft: 40px;
+@main_paddingRight: 40px;
+@main_paddingBottom: 20px;
+@main_fgColor: @colText;
+@main_h1Color: #c0f0ff;
+@main_h2Color: #c0f0ff;
+@main_h3Color: #c0f0ff;
+
+@main_aside_vbarColor: darken(#e0ffc0, 8%);
+//@main_aside_fgColor: #60ffe0;
+@main_aside_fgColor: #c0f0ff;
+
+@hugecentertitle_title_fgColor: darken(#e0ffc0, 8%);
+@hugecentertitle_subTitle_fgColor: #c0f0ff;
+
+@transitionSpeed: 0.3s;
+
+@form_bgColor: lighten(@page_bgColor, 3%);
+@form_borderColor: lighten(@page_bgColor, 10%);
+@form_ctrl_borderColor: lighten(@page_bgColor, 10%);
+@form_button_borderColor: lighten(#00242B, 30%);
+
+@table_labelColor: #c0f0ff;
+
+
+
+//   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+//  / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+// ################################################################################################################################
+
+
+
+
+
+
+
+
+
+// ################################################################################################################################
+// #### Common mixins
+
+.x-hyphens(@params) {
+	hyphens: @params;
+	-webkit-hyphens: @params;
+	-moz-hyphens: @params;
+}
+
+.x-hyphens(@params) {
+	hyphens: @params;
+	-webkit-hyphens: @params;
+	-moz-hyphens: @params;
+}
+
+.x-border-radius(@params) {
+	border-radius: @params;
+	-webkit-border-radius: @params;
+	-moz-border-radius: @params;
+}
+
+.x-box-shadow(@params) {
+	box-shadow: @params;
+	-webkit-box-shadow: @params;
+	-moz-box-shadow: @params;
+}
+
+.x-flex-direction(@params) {
+	flex-direction: @params;
+	-webkit-flex-direction: @params;
+	-moz-flex-direction: @params;
+}
+
+.x-flex-wrap(@params) {
+	flex-wrap: @params;
+	-webkit-flex-wrap: @params;
+	-moz-flex-wrap: @params;
+}
+
+.x-flex-align-items(@params) {
+	align-items: @params;
+	-webkit-align-items: @params;
+	-ms-flex-align: @params;
+}
+
+.x-flex-justify-content(@params) {
+	justify-content: @params;
+	-webkit-justify-content: @params;
+	-ms-flex-pack: @params;
+}
+
+.x-flex-align-content(@params) {
+	align-content: @params;
+	-webkit-align-content: @params;
+	-ms-flex-line-pack: @params;
+}
+
+//   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+//  / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+// ################################################################################################################################
+
+
+
+
+
+
+
+
+
+
+/* latin-ext */
+@font-face {
+	font-family: 'Merienda';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/merienda/v9/gNMHW3x8Qoy5_mf8uWMLMIqK_Q.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+	font-family: 'Merienda';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/merienda/v9/gNMHW3x8Qoy5_mf8uWMFMIo.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+
+
+
+
+
+
+* {
+	color: @colText;
+	font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	text-rendering: optimizeLegibility;
+	font-size: 11pt;
+}
+
+html {
+	.x-box-shadow(xx);
+	.x-hyphens(auto);
+	margin: 0px;
+	padding: 0px;
+	text-rendering: optimizeLegibility;
+	background-color: @page_bgColor;
+}
+
+body {
+	.x-hyphens(auto);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	.x-flex-direction(column);
+	.x-flex-wrap(nowrap);
+
+	min-height: 105vh !important;
+	margin: 0px;
+	padding: 0px;
+	background-color: @page_bgColor;
+	text-rendering: optimizeLegibility;
+}
+
+/*
+.box > * {
+	flex: 0 0 auto;
+}
+*/
+
+/*
+ * This styles the navigation bar at the top
+ */
+nav {
+	flex-grow: 0;							// the mavigation bar itself should not grow
+	background-color: @navBar_bgColor;
+	height: @navBar_height;					// defines height of navigation bar relative to font size
+	font-weight: bold;
+	display: flex;							// we want flex layout for all components in the nav bar
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	border-bottom: 1px solid @grooveColor;
+
+	.x-flex-direction(row);					// horizontal layout of contained components
+	.x-flex-justify-content(right);			// right to left layout
+
+	.nav-logo {
+		font-size: 2.5rem;
+		border-left: @navBar_logo_borderWidth solid transparent;
+		font-family: Merienda;
+		font-weight: 100;
+	}
+
+	.nav-logo::after {
+		content: "Thaniya Archive";
+	}
+
+	.nav-space {
+		flex-grow: 1;
+	}
+
+	.nav-item {
+		display: flex;						// treat all text content as blocks themselves
+		display: -ms-flexbox;
+		display: -webkit-flex;
+
+		.x-flex-direction(row);					// horizontal layout of contained components
+		.x-flex-align-items(center);
+		.x-flex-justify-content(center);
+
+		background-color: @navBar_item_bgColor;
+		border: @navBar_item_borderWidth solid transparent;
+		min-width: @navBar_item_minWidth;
+		color: @navBar_fgColor;
+		cursor: pointer;
+		transition: @transitionSpeed;
+	}
+
+	.nav-item:hover {
+		background-color: lighten(@navBar_item_bgColor, 16);
+		transition: @transitionSpeed;
+	}
+
+	a {
+		text-decoration: none;
+		color: @navBar_fgColor;
+	}
+
+}
+
+/*
+div.main {
+	flex-grow: 1;
+}
+*/
+
+.top-bar {
+	flex-grow: 0;
+	background-color: @topBar_bgColor;
+	padding: 10px;
+	color: @topBar_fgColor;
+}
+
+.bottom-bar {
+	flex-grow: 0;
+	background-color: @topBar_bgColor;
+	padding: 10px;
+	color: @topBar_fgColor;
+}
+
+/*
+ * The footer bar
+ */
+footer {
+	flex-grow: 0;
+	background-color: @footer_bgColor;
+	min-height: @footer_minHeight;
+	color: @footer_fgColor;
+	border: @footer_borderWidth solid transparent;
+	display: flex;							// we want flex layout for all components in the nav bar
+	display: -ms-flexbox;
+	display: -webkit-flex;
+
+	.x-flex-direction(row);					// horizontal layout of contained components
+	// .x-flex-align-content(stretch);
+	//.x-flex-justify-content(right);			// right to left layout
+	//.x-flex-justify-content(flex-start);
+	//.x-flex-align-items(flex-start);
+	.x-flex-align-items(flex-end);
+	.x-flex-justify-content(space-evenly);
+
+	* {
+		// background-color: #800000;
+		color: @footer_fgColor;
+		font-size: 0.85rem;
+		// flex: 1 1 auto;
+		// width: 40%vw;
+	}
+
+	p {
+		// text-align: left !important;
+	}
+}
+
+
+
+.page-main {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex: 1 1 auto;							// all available space goes here
+
+	> * {
+		flex: 0 0 auto;						// do not resize these elements
+	}
+
+	main {
+		flex: 1 1 auto;						// all available space goes here
+	}
+
+}
+
+.sideext-left {
+	border-top: 1px solid @grooveColor;
+	border-bottom: 1px solid @grooveColor;
+	width: @main_paddingRight;
+}
+
+.sideext-right {
+	border-top: 1px solid @grooveColor;
+	border-bottom: 1px solid @grooveColor;
+	width: @main_paddingLeft;
+}
+
+.gapbar-right {
+	background-color: @gapBarRight_bgColor;
+	width: @gapBarRight_width;
+	border-left: 1px solid @grooveColor;
+	border-right: 1px solid @grooveColor;
+}
+
+.sidebar-right {
+	background-color: @sideBarRight_bgColor;
+	color: @sideBarRight_fgColor;
+	min-width: @sideBarRight_minWidth;
+	padding: 20px;
+	border-top: 1px solid @grooveColor;
+	border-bottom: 1px solid @grooveColor;
+}
+
+main {
+	background-color: red;					// if we forget to assign a correct class to the main tag, we will see red background
+	border-top: 1px solid @grooveColor;
+	border-bottom: 1px solid @grooveColor;
+	color: @main_fgColor;
+	padding-top: @main_paddingTop;
+	padding-bottom: @main_paddingBottom;
+}
+
+
+
+
+.top-space {
+	margin-top: 22px;
+}
+
+.bottom-space {
+	margin-bottom: 22px;
+}
+
+
+
+
+
+// ################################################################################################################################
+// #### Huge Title in the Center of the Screen
+// ################################################################################################################################
+
+
+
+
+main.hugecentertitle {
+	background-color: @page_bgColor;
+
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	.x-flex-direction(column);
+	.x-flex-wrap(nowrap);
+	.x-flex-justify-content(center);
+	.x-flex-align-content(stretch);
+	.x-flex-align-items(center);
+
+	h1 {
+		font-size: 280%;
+		margin: 0px;
+		color: @hugecentertitle_title_fgColor;
+	}
+
+	h2 {
+		font-size: 150%;
+		margin: 0px;
+		color: @hugecentertitle_subTitle_fgColor;
+	}
+}
+
+
+
+
+
+// ################################################################################################################################
+// #### Regular Page
+// ################################################################################################################################
+
+
+
+
+main.article {
+	background-color: @page_bgColor;
+	flex: 1 1 auto;
+
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	.x-flex-direction(column);
+	.x-flex-wrap(nowrap);
+	.x-flex-justify-content(flex-start);
+	.x-flex-align-content(stretch);
+	.x-flex-align-items(flex-start);
+
+	.container {
+		//width: 1000px;
+	}
+
+	h1 {
+		font-size: 250%;
+		color: @main_h1Color;
+	}
+
+	h2 {
+		font-size: 150%;
+		color: @main_h2Color;
+	}
+
+	h3 {
+		color: @main_h3Color;
+	}
+
+	p {
+		margin-left: 20px;
+		text-align: justify;
+	}
+
+	ul {
+		list-style-type: circle;
+		list-style: none;
+		padding-left: 20px;
+		list-style-position: inside;
+
+		li::before {
+			content: "⚫ ";
+		}
+	}
+
+	ol {
+		list-style-position: inside;
+		padding-left: 20px;
+	}
+
+	li {
+	}
+
+	p {
+		// font-size: 106%;
+	}
+
+	aside {
+		float: right;
+		margin-left: 20px;
+		border-left: 8px solid @main_aside_vbarColor;
+		margin-top: 0px;
+		margin-bottom: 10px;
+		max-width: 20rem;
+		font-weight: bold;
+		font-style: italic;
+
+		> * {
+			color: @main_aside_fgColor;
+		}
+
+		p {
+			margin-left: 17px;
+		}
+
+		p:first-child {
+			margin-top: 0px;
+		}
+
+		p:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+}
+
+
+
+
+// ################################################################################################################################
+// #### Thaniya Logo Within Text
+// ################################################################################################################################
+
+
+
+
+span.thaniya {
+	font-family: Merienda;
+	font-weight: 100;
+	color: inherit;
+}
+span.thaniya::after {
+	content: "Thaniya";
+}
+
+
+
+
+// ################################################################################################################################
+// #### Notification Box
+// ################################################################################################################################
+
+
+
+
+.x-notification-box-mixin {
+	padding: 20px;
+	border-radius: 3px;
+	border: 1px groove @form_ctrl_borderColor;
+}
+
+.notification-box {
+	.x-notification-box-mixin();
+
+	@col1: lighten(@colBGRefColor, 2%);
+	@col2: lighten(@colBGRefColor, 4%);
+
+	background-image: repeating-linear-gradient(135deg, @col1, @col1 10px, @col2 10px, @col2 20px);
+}
+
+.notification-box-red {
+	.x-notification-box-mixin();
+
+	@col1: #800000;
+	@col2: #901010;
+
+	background-image: repeating-linear-gradient(135deg, @col1, @col1 10px, @col2 10px, @col2 20px);
+}
+
+.notification-box-info {
+	.x-notification-box-mixin();
+
+	@col1: #007000;
+	@col2: #0c800c;
+
+	background-image: repeating-linear-gradient(135deg, @col1, @col1 10px, @col2 10px, @col2 20px);
+}
+
+
+
+
+
+// ################################################################################################################################
+// #### Forms and Form Elements
+// ################################################################################################################################
+
+
+
+
+/*
+ * this CSS group is used as a mixin for all form controls
+ */
+.x-input-control-mixin {
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+
+	font-size: 1rem;
+	font-weight: 400;
+
+	color: #cdf;
+	background-color: lighten(@navBar_bgColor, 3%);
+	border-radius: 3px;
+	border: 1px groove @form_ctrl_borderColor;
+	padding: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+
+	transition: @transitionSpeed;
+}
+
+
+
+
+
+/*
+ * a form button
+ */
+button {
+	.x-input-control-mixin();
+
+	@bgCol: lighten(#00242B, 8%);
+	border: 1px groove @form_button_borderColor;
+
+	min-width: 7rem;
+	background-color: @bgCol;
+
+	.x-box-shadow(0px 0px 3px 2px #ffffff30);
+
+	&:focus {
+		color: #fff;
+		background-color: lighten(@bgCol, 10%);
+	}
+
+	&:hover {
+		color: #fff;
+		background-color: lighten(@bgCol, 24%);
+	}
+
+}
+
+/*
+ * a normal text input field
+ */
+input {
+	.x-input-control-mixin();
+
+	@bgCol: lighten(#00242B, 8%);
+
+	&:focus {
+		color: #fff;
+		background-color: lighten(#00242B, 19%);
+	}
+
+	/*
+
+	NOTE: trying to style "autofill" - but this does not work
+
+	filter: unset;
+
+	&:autofill {
+		background-color: lighten(#00242B, 19%);
+		filter: unset;
+	}
+
+	&:-moz-autofill {
+		background-color: lighten(#00242B, 19%);
+		filter: unset;
+	}
+
+	&:-moz-autofill-preview {
+		background-color: lighten(#00242B, 19%);
+		filter: unset;
+	}
+	*/
+
+}
+
+textarea {
+	.x-input-control-mixin();
+
+	@bgCol: lighten(#00242B, 8%);
+
+	min-height: 3rem;
+
+	&:focus {
+		color: #fff;
+		background-color: lighten(#00242B, 19%);
+	}
+
+	/*
+
+	NOTE: trying to style "autofill" - but this does not work
+
+	filter: unset;
+
+	&:autofill {
+		background-color: lighten(#00242B, 19%);
+		filter: unset;
+	}
+
+	&:-moz-autofill {
+		background-color: lighten(#00242B, 19%);
+		filter: unset;
+	}
+
+	&:-moz-autofill-preview {
+		background-color: lighten(#00242B, 19%);
+		filter: unset;
+	}
+	*/
+
+}
+
+/*
+ * the form field
+ */
+form {
+	background-color: @form_bgColor;
+	border: 1px groove @form_borderColor;
+	border-radius: 3px;
+	padding: 20px;
+
+	/*
+	 * this defines a group for form elements; it is a two column grid; the content of this grid must be consecuting pairs of elements (= label followed by control);
+	 */
+	.form-element-group {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		// grid-template-rows: 1fr 1fr 1fr;
+		gap: 8px 12px;
+		grid-template-areas:
+			". ."
+			". ."
+			". ."
+			;
+		align-items: center;
+	}
+
+	/*
+	 * this separates a set of buttons on the bottom of a form from the elements by defining a larger top margin
+	 */
+	 .form-button-group {
+		margin-top: 12px;
+	}
+
+}
+
+/*
+* checkboxes must use this style
+*/
+.regular-checkbox {
+	.x-input-control-mixin();
+
+	@bgCol: lighten(#00242B, 8%);
+
+	&:focus {
+		color: #fff;
+		background-color: lighten(#00242B, 19%);
+	}
+
+	-webkit-appearance: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	display: inline-block;
+	position: relative;
+
+	&:active {
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+	}
+
+	&:checked:active {
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+	}
+
+	&:checked {
+		box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	}
+
+	&:checked:after {
+		content: '\2714';
+		font-size: 1.1rem;
+		position: absolute;
+		top: 0px;
+		left: 3px;
+	}
+
+}
+
+
+
+
+// ################################################################################################################################
+// #### Tables
+// ################################################################################################################################
+
+
+
+table {
+
+	td {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	td.label {
+		text-align: right;
+		color: @table_labelColor;
+	}
+
+}
+
+table.userprofile {
+
+	td {
+		height: 2.5rem;			/* suitable for buttons so that we can have beautiful tables with buttons in each row */
+		/* border: 1px solid yellow; */
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

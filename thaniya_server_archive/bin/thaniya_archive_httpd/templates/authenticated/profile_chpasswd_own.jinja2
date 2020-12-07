@@ -1,0 +1,41 @@
+{% extends "authenticated/base.jinja2" %}
+
+{% block maincontent %}
+<main class="hugecentertitle">
+	<div class="container">
+		<h1>{{ user.userName }}</h1>
+
+		<p style="max-width: 750px">
+			To change your existing password please first enter your current password, then enter the new one twice.
+		</p>
+
+		<p style="max-width: 750px">
+			Please choose your password carefully. You should use a strong, complex password of about 12 characters or more in length
+			while at the same time you should still be able to remember it well.
+		</p>
+
+		<form method="POST" action="/do_chpasswd_own">
+			{{ form_flash_errors() }}
+
+			<div class="form-element-group">
+				<label for="password_old">Old password:</label>
+				<input type="password" id="password_old" name="password_old" placeholder="Your old password">
+
+				<label for="password_new_1">New password:</label>
+				<input type="password" id="password_new_1" name="password_new_1" placeholder="The new password">
+
+				<label for="password_new_2">New password (again):</label>
+				<input type="password" id="password_new_2" name="password_new_2" placeholder="The new password">
+
+				<div></div>
+				<div class="form-button-group">
+					<button type="button" onclick="document.location='{{ url_for('main.profile') }}'">Cancel</button>
+					<button type="submit">Change</button>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</main>
+{% endblock %}

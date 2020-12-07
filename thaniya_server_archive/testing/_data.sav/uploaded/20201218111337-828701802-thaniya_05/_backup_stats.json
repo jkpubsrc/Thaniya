@@ -1,0 +1,21 @@
+{
+	"data": {
+		"avgWritingSpeed": 17809849.896966968,
+		"bSuccess": true,
+		"backupIdentifier": "fooBar",
+		"backupUserName": "woodoo",
+		"d0_calcDiskSpace": 0.043013811111450195,
+		"d1_connectAndPrepare": 0.46089887619018555,
+		"d2_backup": 0.6952810287475586,
+		"expectedBytesToWrite": 12756058,
+		"hostName": "selenium",
+		"simulate": false,
+		"tEnd": 1608286416.623469,
+		"tStart": 1608290015.423183,
+		"totalBytesWritten": 12378112
+	},
+	"magic": {
+		"magic": "thaniya-stats",
+		"version": 1
+	}
+}

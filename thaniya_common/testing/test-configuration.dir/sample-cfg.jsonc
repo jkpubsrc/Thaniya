@@ -1,0 +1,15 @@
+{
+	"magic": {
+		"magic": "my-cfg",
+		"version": 1,
+	},
+	"defs": {
+		"VAR": "/var"
+	},
+	"mycfg": {
+		"foo": null,
+		"run": "$(VAR)/run",
+	}
+}
+
+

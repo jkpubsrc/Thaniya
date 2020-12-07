@@ -1,0 +1,32 @@
+{
+	"magic": {
+		"magic": "packageinfo",
+		"version": 2,
+		"subtype": "packagegroup",
+	},
+	"meta": {
+		"authors": [
+			{
+				"email": "pubsrc@binary-overflow.de",
+				"name": "J\u00fcrgen Knauth"
+			}
+		],
+		"description": "This project provides a python based backup infrastructure.",
+		"development_status": "alpha",
+		"keywords": [
+			"backup"
+		],
+		"license": "Apache2",
+		"name": "Thaniya",
+		"packageType": "devon-package-group",
+		"version": "0.2021.1.18"
+	},
+	"subpackages": [
+		"thaniya_common",
+		"thaniya_client",
+		"thaniya_server",
+		"thaniya_server_archive",
+		"thaniya_server_sudo",
+		"thaniya_server_upload",
+	]
+}

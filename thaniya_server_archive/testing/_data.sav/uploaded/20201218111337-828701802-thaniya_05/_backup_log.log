@@ -1,0 +1,106 @@
+[2020-12-18 11:13:35]     NOTICE: Initializing backup context ...
+[2020-12-18 11:13:35]       INFO: Calculating disk space required
+	[2020-12-18 11:13:35]       INFO: Calculating backup size of directory: '/etc'
+		[2020-12-18 11:13:35]       INFO: Calculating size for tar file ...
+		[2020-12-18 11:13:35]       INFO: I/O expected: 12.8M
+	[2020-12-18 11:13:35]       INFO: Estimated total size of backup: 12.8M
+	[2020-12-18 11:13:35]     NOTICE: Done.
+	[2020-12-18 11:13:35]     NOTICE: Terminating with success after: 00:00:00
+[2020-12-18 11:13:35]       INFO: Connecting to backup repository and preparing backup
+	[2020-12-18 11:13:35]       INFO: Initializinig connection ...
+		[2020-12-18 11:13:35]       INFO: Contacting Thaniya server to allocate backup slot ...
+		[2020-12-18 11:13:35]       INFO: Mounting sftp::thaniya_05@192.168.10.100:/ at /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF ...
+		[2020-12-18 11:13:35]     NOTICE: Mounted.
+	[2020-12-18 11:13:35]       INFO: Selecting target directory
+	[2020-12-18 11:13:35]     NOTICE: Selected target directory: '/mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload'
+	[2020-12-18 11:13:35]       INFO: Ensuring directory exists: '/mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload'
+		[2020-12-18 11:13:35]     NOTICE: Setting directory mode: rwx------
+	[2020-12-18 11:13:35]     NOTICE: Writing to: /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/_backup_stats.json
+	[2020-12-18 11:13:35]     NOTICE: Done.
+	[2020-12-18 11:13:35]     NOTICE: Terminating with success after: 00:00:00
+[2020-12-18 11:13:35]       INFO: Writing the backup data
+	[2020-12-18 11:13:35]       INFO: Performing backup of directory: '/etc'
+		[2020-12-18 11:13:35]       INFO: Creating tar file '/mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/etc.tar' ...
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/.pwd.lock'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/at.deny'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/group-'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/gshadow'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/gshadow-'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/passwd-'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/shadow'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/shadow-'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/subgid-'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/subuid-'
+		[2020-12-18 11:13:35]    WARNING: [Errno 13] Permission denied: '/etc/sudoers'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/classes.conf'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/classes.conf.O'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/printers.conf'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/printers.conf.O'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/subscriptions.conf'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/subscriptions.conf.O'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/default/cacerts'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/docker/key.json'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/exim4/passwd.client'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/gufw/Home.profile'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/gufw/Office.profile'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/gufw/Public.profile'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/gufw/gufw.cfg'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/kvmmgr/kvmmgr.cfg'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/mysql/debian.cnf'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ppp/chap-secrets'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ppp/pap-secrets'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/security/opasswd'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ssh/ssh_host_dsa_key'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ssh/ssh_host_ecdsa_key'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ssh/ssh_host_ed25519_key'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ssh/ssh_host_rsa_key'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/sudoers.d/99-snapd.conf'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/sudoers.d/README'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/sudoers.d/backupmaster'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/sudoers.d/thaniya'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/sudoers.d/woodoo'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/after.init'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/after.rules'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/after6.rules'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/before.init'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/before.rules'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/before6.rules'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/user.rules'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ufw/user6.rules'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/vpnc'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/NetworkManager/system-connections/Annika'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/NetworkManager/system-connections/GoeNet VPN'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/NetworkManager/system-connections/X235T'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/NetworkManager/system-connections/X236T'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/NetworkManager/system-connections/br0'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/NetworkManager/system-connections/enp0s31f6'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/lightdm-guest-session'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/sbin.dhclient'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.bin.evince'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.lib.snapd.snap-confine.real'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.lib.unreal'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.cups-browsed'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.cupsd'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.mysqld'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.ntpd'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.tcpdump'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/ppd/BrotherHL-L2375DW.ppd'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/ppd/KONICA-MINOLTA-pp5650-PPD.ppd'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/cups/ssl'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/mosquitto/security'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/polkit-1/localauthority'
+		[2020-12-18 11:13:36]    WARNING: [Errno 13] Permission denied: '/etc/ssl/private'
+	[2020-12-18 11:13:36]     NOTICE: All backup tasks completed.
+	[2020-12-18 11:13:36]       INFO: Calculating size of backup performed ...
+	[2020-12-18 11:13:36]       INFO: Total bytes written: 12.4M
+	[2020-12-18 11:13:36]       INFO: Average writing speed: 17.8M/s
+	[2020-12-18 11:13:36]     NOTICE: Done.
+	[2020-12-18 11:13:36]     NOTICE: Terminating with success after: 00:00:00
+[2020-12-18 11:13:36]       INFO: Finalizing backup
+	[2020-12-18 11:13:36]    WARNING: There were warnings!
+	[2020-12-18 11:13:36]    SUCCESS: Backup successfully completed.
+	[2020-12-18 11:13:36]       INFO: Writing stats ...
+		[2020-12-18 11:13:36]     NOTICE: Writing to: /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/_backup_stats.json
+	[2020-12-18 11:13:36]       INFO: Writing log ...
+		[2020-12-18 11:13:36]     NOTICE: Writing to: /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/_backup_log.log
+		[2020-12-18 11:13:36]     NOTICE: Writing to: /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/_backup_log.json

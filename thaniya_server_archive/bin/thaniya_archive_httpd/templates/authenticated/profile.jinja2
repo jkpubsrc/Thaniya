@@ -1,0 +1,71 @@
+{% extends "authenticated/base.jinja2" %}
+
+{% block maincontent %}
+<main class="article">
+	{{ page_flashs() }}
+	<div class="container">
+
+		<h1>{{ user.userName }}</h1>
+
+		<table class="userprofile">
+			<tr>
+				<td class="label">Role:</td>
+				<td>
+					{{ user.role|default("-") }}
+				</td>
+			</tr>
+			<tr>
+				<td class="label">EMail:</td>
+				<td>
+					{{ user.eMail }}
+					<button type="button">Edit</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="label">Supervises:</td>
+				<td>
+					{{ user.supervises|join(", ") }}
+				</td>
+			</tr>
+			<tr>
+				<td class="label">Web Login Password:</td>
+				<td>
+					****************
+					{% if user.hasPrivilege("privChangeOwnLoginPwd") %}
+						<button type="button" onclick="document.location='{{ url_for('main.profile_chpasswd_own') }}'">Change</button>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td class="label">Backup Upload Password:</td>
+				<td>
+					{% if user.canUpload %}
+						<div id="bup1" style="display:inline-block">****************</div><div style="display:none" id="bup2">{{ user.uploadPwd }}</div>
+						<button type="button" class="click-bup">Show</button>
+						{% if user.hasPrivilege("privChangeOwnBackupUploadPwd") %}
+							<button type="button" onclick="document.location='{{ url_for('main.profile_chuploadpasswd_own') }}'">Change</button>
+						{% endif %}
+					{% else %}
+						{% if user.hasPrivilege("privChangeOwnBackupUploadPwd") %}
+							<button type="button" onclick="document.location='{{ url_for('main.profile_chuploadpasswd_own') }}'">Generate</button>
+						{% endif %}
+					{% endif %}
+				</td>
+			</tr>
+		</table>
+
+	</div>
+</main>
+<script>
+
+	registerEvent("click-bup", function(event) {
+		toggleInline("bup1");
+		if (toggleInline("bup2")) {
+			event.target.innerHTML = "Hide";
+		} else {
+			event.target.innerHTML = "Show";
+		}
+	});
+
+</script>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "authenticated/base.jinja2" %}
+
+{% block maincontent %}
+
+<main class="article">
+	<div class="container">
+
+		<h2>FileSystem</h2>
+
+		{% for fsInfo in fsInfoList %}
+			<h3>{{ fsInfo.title }}</h2>
+			<div style="margin-bottom:1.8em;padding:8px;background-color:#00000040;">
+				{{ fsInfo.toSVG(1200)|safe }}
+			</div>
+		{% endfor %}
+
+		<h2>Slots</h2>
+
+		<table style="margin-bottom:1.8em;padding:8px;background-color:#00000040;">
+		<tr>
+			<th>Identifier</th>
+			<th>Upload slot<br>state</th>
+			<th>Is allocated</th>
+			<th>Allocated<br>by user</th>
+			<th>Is in use</th>
+			<th>Allocation time</th>
+			<th>Completion time</th>
+			<th>Last Used time</th>
+		</tr>
+		{% for slot in slotList %}
+			<tr>
+				<td style="font-size:80%; text-align:left;">{{ slot.identifier }}</td>
+				<td style="font-size:80%; text-align:left;">{{ slot.state|toStr }}</td>
+				<td style="font-size:80%; text-align:center;">{{ slot.isAllocated|boolToYesNo }}</td>
+				<td style="font-size:80%; text-align:center;">{{ slot.backupUser.userName }}</td>
+				<td style="font-size:80%; text-align:center;">{{ slot.isInUseByClient|boolToYesNo }}</td>
+				<td style="font-size:80%; text-align:center;">{{ slot.allocationTime|formatDateTime|default("-", true) }}</td>
+				<td style="font-size:80%; text-align:center;">{{ slot.completionTime|formatDateTime|default("-", true) }}</td>
+				<td style="font-size:80%; text-align:center;">{{ slot.lastUsedByClientTime|formatDateTimeHRAge|default("-", true) }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+
+	</div>
+</main>
+
+{% endblock %}

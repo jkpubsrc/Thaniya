@@ -1,0 +1,104 @@
+
+
+import os
+
+import werkzeug.security
+
+import jk_utils
+import jk_argparsing
+import jk_console
+
+from thaniya_server.app.CLICmdBase import CLICmdBase
+from thaniya_server.app.CLICmdParams import CLICmdParams
+from thaniya_server.usermgr import BackupUser
+from thaniya_server.usermgr import BackupUserManager
+
+from .AppRuntimeServerCtrl import AppRuntimeServerCtrl
+
+
+
+
+
+
+
+class _CLICmd_user_setpwd(CLICmdBase):
+
+	################################################################################################################################
+	## Constructors
+	################################################################################################################################
+
+	def __init__(self, appRuntime:AppRuntimeServerCtrl):
+		self.__appRuntime = appRuntime
+	#
+
+	################################################################################################################################
+	## Public Properties
+	################################################################################################################################
+
+	@property
+	def cmdName(self) -> str:
+		return "user-setpwd"
+	#
+
+	#
+	# The short description.
+	#
+	@property
+	def shortDescription(self) -> str:
+		return "(Re)set the login password for an existing user."
+	#
+
+	@property
+	def usesOutputWriter(self) -> bool:
+		return True
+	#
+
+	################################################################################################################################
+	## Public Methods
+	################################################################################################################################
+
+	def registerCmd(self, ap:jk_argparsing.ArgsParser) -> jk_argparsing.ArgCommand:
+		argCmd = super().registerCmd(ap)
+		argCmd.expectString("user", minLength=1)
+	#
+
+	def _runImpl(self, p:CLICmdParams) -> bool:
+		p.out.autoFlush = True
+		with p.out.section("Change user login password") as out:
+
+			formUserData = p.out.createForm()
+			formUserData.addEntry("pwd", "The new login password:", "The new login password again:", "pwd2", minLength=3)
+
+			textWidth = formUserData.maxWidth
+
+			bChanged = False
+			try:
+
+				userName = p.cmdArgs[0]
+				user = self.__appRuntime.userMgr.getUser(userName)
+				if user is None:
+					p.out.print("ERROR: No such user: '{}'".format(userName))
+					return
+
+				ret2 = formUserData.run(textWidth)
+
+				user.passwordHash = werkzeug.security.generate_password_hash(ret2["pwd"], method="sha256")
+				user.store()
+
+				bChanged = True
+
+			finally:
+				p.out.print()
+				if bChanged:
+					p.out.print("Password set.")
+				else:
+					p.out.print("No change.")
+				p.out.print()
+	#
+
+#
+
+
+
+
+

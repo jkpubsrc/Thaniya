@@ -1,0 +1,32 @@
+{% extends "testpages/base.html" %}
+
+{% block maincontent %}
+<main class="hugecentertitle">
+
+	<form method="POST" action="/do_login">
+		<div class="notification-box-red is-danger bottom-space">
+			Lorem ipsum
+		</div>
+
+		<div class="form-element-group">
+			<label for="userName">Login:</label>
+			<input type="text" id="userName" name="userName" placeholder="Your Login" autofocus="">
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Your Password">
+
+			<label for="remember_me">Remember me:</label>
+			<div>
+				<input type="checkbox" id="remember_me" name="remember_me" class="regular-checkbox"></input>
+			</div>
+
+			<div></div>
+			<div class="form-button-group">
+				<button type="submit">Login</button>
+			</div>
+		</div>
+
+	</form>
+
+</main>
+{% endblock %}

@@ -1,0 +1,16 @@
+{
+	"data": {
+		"backupIdentifier": null,
+		"backupUserName": null,
+		"dClientBackupDuration": null,
+		"sizeInBytes": 12345,
+		"systemName": null,
+		"tBackupEnd": 1610400059.147608,
+		"tBackupStart": 1610400059.147407
+	},
+	"magic": {
+		"comment": null,
+		"magic": "thaniya-uploaded-backup-info",
+		"version": 1
+	}
+}

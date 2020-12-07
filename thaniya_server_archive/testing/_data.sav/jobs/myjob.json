@@ -1,0 +1,21 @@
+{
+	"magic": {
+		"magic": "thaniya-archiving-job",
+		"version": 1
+	},
+	"data": {
+		"jobType": "InsertIntoArchive",
+		"jobData": {
+			"sourceDirName": "20201218111337-828701802-thaniya_05",
+			"sourceFileNames": [
+				"etc.tar"
+			],
+			"metaFileNames": [
+				"_backup_log.json",
+				"_backup_log.log",
+				"_backup_stats.json",
+				"_backup_info.json"
+			]
+		}
+	}
+}

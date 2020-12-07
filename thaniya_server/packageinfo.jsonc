@@ -1,0 +1,74 @@
+{
+	"magic": {
+		"magic": "packageinfo",
+		"version": 2,
+	},
+	"meta": {
+		"name": "thaniya_server",
+		"version": "0.2021.1.20",
+		"packageClass": "python-module",
+		"language": "python3",
+		"development_status": "alpha",
+		"license": "Apache2",
+		"keywords": [
+			"thaniya",
+		],
+		"description": "The Thaniya backup server.",
+		"authors": [
+			{
+				"name": "Jürgen Knauth",
+				"email": "pubsrc@binary-overflow.de"
+			}
+		],
+	},
+	"requirements": {
+		"python_packages": [
+			"flask",
+			"flask_login",
+			"thaniya_common",
+		],
+		"python_packages_dev": [
+		],
+		"system_apt_packages": [
+			"mysecureshell",
+		],
+	},
+	"source": {
+		"packages": [
+			"thaniya_server",
+			"thaniya_server.session",
+			"thaniya_server.app",
+			"thaniya_server.api",
+			"thaniya_server.usermgr",
+			"thaniya_server.utils",
+			"thaniya_server.sysusers",
+			"thaniya_server.flask",
+			"thaniya_server.jobs",
+		],
+		"extra_data_files": [
+		],
+		"extra_binary_files": [
+		]
+	},
+	"documentation": [
+		/*
+		"wiki": {
+			"page": "DevDocs:thaniya_server"
+		}
+		*/
+	],
+	"repositories": [
+		{
+			"type": "github",
+			"user": "jkpubsrc",
+			"project": "........",
+			"devon_publish": false
+		},
+		{
+			"type": "pypi",
+			"project": "........",
+			"devon_publish": false
+		}
+	],
+}
+

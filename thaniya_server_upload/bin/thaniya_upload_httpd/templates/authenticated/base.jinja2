@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ htmlHeadTitle }}</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/styles_new.css?rndid={{rndid}}" />
+	<!--
+		<link rel="stylesheet/less" type="text/css" href="/static/css/styles_new.less?rndid={{rndid}}" />
+		<script src="/static/js/less.min.js" type="text/javascript"></script>
+	-->
+	<script src="/static/js/thaniya.js" type="text/javascript"></script>
+	<script src="/static/js/scripts.js" type="text/javascript"></script>
+</head>
+
+{% macro form_flash_errors() %}
+	{% with messages = get_flashed_messages(category_filter=["error"]) %}
+		{% if messages %}
+			{% for message in messages %}
+				<div class="notification-box-red is-danger bottom-space">{{ message }}</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+{% endmacro %}
+
+{% macro page_flashs() %}
+	{% with messages = get_flashed_messages(category_filter=["message"]) %}
+		{% if messages %}
+			{% for message in messages %}
+				<div class="notification-box-info bottom-space">{{ message }}</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	{% with messages = get_flashed_messages(category_filter=["error"]) %}
+		{% if messages %}
+			{% for message in messages %}
+				<div class="notification-box-red is-danger bottom-space">{{ message }}</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+{% endmacro %}
+
+<body>
+
+	<nav>
+		<a href="index.html" class="nav-logo"></a>
+		<div class="nav-space"></div>
+		{% include("authenticated/_menu.jinja2") with context %}
+	</nav>
+	<div class="top-bar">{{ visNavPath }}</div>
+	<div class="page-main">
+		<div class="sideext-left"></div>
+	
+		{% block maincontent %}{% endblock %}
+
+		<div class="sideext-right"></div>
+		{% if self.rightsidecontent() %}
+			<div class="gapbar-right"></div>
+			<div class="sidebar-right">{% block rightsidecontent %}{% endblock %}</div>
+		{% endif %}
+	</div>
+
+	<div class="bottom-bar"></div>
+	<footer>
+		{% include("authenticated/_footer.jinja2") with context %}
+	</footer>
+
+</body>
+
+</html>

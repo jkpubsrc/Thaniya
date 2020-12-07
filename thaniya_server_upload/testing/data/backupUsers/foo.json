@@ -1,0 +1,11 @@
+{
+	"enabled": true,
+	"passwordHash": "fcde2b2edba56bf408601fb721fe9b5c338d10ee429ea04fae5511b68fbf8fb9",
+	"eMail": "foo@bar",
+	"backup_sessionID": null,
+	"comment": null,
+	"userName": "foo",
+	"backup_lastActivity": null,
+	"backup_accountName": null,
+	"role": "backup"
+}

@@ -1,0 +1,76 @@
+{% extends "authenticated/base.jinja2" %}
+
+{% block maincontent %}
+
+<main class="article">
+	<div class="container">
+
+		<h2>FileSystem</h2>
+
+		{% for fsInfo in fsInfoList %}
+			<h3>{{ fsInfo.title }}</h2>
+			<div style="margin-bottom:1.8em;padding:8px;background-color:#00000040;">
+				{{ fsInfo.toSVG(1200)|safe }}
+			</div>
+		{% endfor %}
+	
+		<h2>Volumes</h2>
+
+		<table style="margin-bottom:1.8em;padding:8px;background-color:#00000040;">
+		<tr>
+			<th>Backup Volume ID</th>
+			<th>Volume Cfg Type</th>
+			<th>Device</th>
+			<th>Device Type</th>
+			<th>Mount Point</th>
+			<th>Base Dir Path</th>
+			<th>File System</th>
+			<th>Bytes Total</th>
+			<th>Bytes Free</th>
+			<th>PhySecSize</th>
+			<th>Valid</th>
+			<th>Active</th>
+		</tr>
+		{% for bvi in volumeList %}
+			<tr>
+				<td style="font-size:80%">{{ bvi.backupVolumeID.hexData }}</td>
+				<td style="font-size:80%">{{ bvi.volumeCfgType }}</td>
+				<td style="font-size:80%">{{ bvi.device.devType }}</td>
+				<td style="font-size:80%">{{ bvi.device.devPath }}</td>
+				<td style="font-size:80%">{{ bvi.device.mountPoint }}</td>
+				<td style="font-size:80%">{{ bvi.backupBaseDirPath }}</td>
+				<td style="font-size:80%">{{ bvi.device.fsType }}</td>
+				<td style="font-size:80%">{{ bvi.device.sizeInBytes|formatBytes }}</td>
+				<td style="font-size:80%">{{ bvi.device.bytesFree|formatBytes }}</td>
+				<td style="font-size:80%">{{ bvi.device.phySecSizeInBytes }}</td>
+				<td style="font-size:80%">{{ bvi.isValid|boolToYesNo }}</td>
+				<td style="font-size:80%">{{ bvi.isActive|boolToYesNo }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+
+		<h2>Archives</h2>
+
+		<table style="margin-bottom:1.8em;padding:8px;background-color:#00000040;">
+		<tr>
+			<th>Backup Volume ID</th>
+			<th>Base Dir Path</th>
+			<th>Has Activity</th>
+			<th>Read-Write</th>
+			<th>Number of Backups</th>
+		</tr>
+		{% for archive in archiveList %}
+			<tr>
+				<td style="font-size:80%">{{ archive.volume.backupVolumeID.hexData }}</td>
+				<td style="font-size:80%">{{ archive.volume.backupBaseDirPath }}</td>
+				<td style="font-size:80%">{{ archive.isReadWrite.isInUse|boolToYesNo }}</td>
+				<td style="font-size:80%">{% if archive.isReadWrite %}read-write{% else %}read-only{% endif %}</td>
+				<td style="font-size:80%">{{ archive.backups|length }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+
+	</div>
+</main>
+
+{% endblock %}

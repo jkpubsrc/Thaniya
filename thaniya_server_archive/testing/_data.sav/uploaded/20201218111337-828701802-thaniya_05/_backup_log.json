@@ -1,0 +1,2002 @@
+[
+	{
+		"id": 0,
+		"timestamp": {
+			"t": 1608286415.421965,
+			"us": 965,
+			"hour": 11,
+			"second": 35,
+			"minute": 13,
+			"day": 18,
+			"month": 12,
+			"ms": 421,
+			"year": 2020
+		},
+		"text": "Initializing backup context ...",
+		"indent": 0,
+		"logleveln": 30,
+		"type": "txt",
+		"loglevel": "NOTICE"
+	},
+	{
+		"id": 1,
+		"timestamp": {
+			"t": 1608286415.423368,
+			"us": 368,
+			"hour": 11,
+			"second": 35,
+			"minute": 13,
+			"day": 18,
+			"month": 12,
+			"ms": 423,
+			"year": 2020
+		},
+		"text": "Calculating disk space required",
+		"indent": 0,
+		"logleveln": 40,
+		"type": "desc",
+		"children": [
+			{
+				"id": 2,
+				"timestamp": {
+					"t": 1608286415.4234178,
+					"us": 418,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 423,
+					"year": 2020
+				},
+				"text": "Calculating backup size of directory: '/etc'",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [
+					{
+						"id": 3,
+						"timestamp": {
+							"t": 1608286415.4235506,
+							"us": 551,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 423,
+							"year": 2020
+						},
+						"text": "Calculating size for tar file ...",
+						"indent": 2,
+						"logleveln": 40,
+						"type": "desc",
+						"children": [],
+						"loglevel": "INFO"
+					},
+					{
+						"id": 4,
+						"timestamp": {
+							"t": 1608286415.4661548,
+							"us": 155,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 466,
+							"year": 2020
+						},
+						"text": "I/O expected: 12.8M",
+						"indent": 2,
+						"logleveln": 40,
+						"type": "txt",
+						"loglevel": "INFO"
+					}
+				],
+				"loglevel": "INFO"
+			},
+			{
+				"id": 5,
+				"timestamp": {
+					"t": 1608286415.4662757,
+					"us": 276,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 466,
+					"year": 2020
+				},
+				"text": "Estimated total size of backup: 12.8M",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "txt",
+				"loglevel": "INFO"
+			},
+			{
+				"id": 6,
+				"timestamp": {
+					"t": 1608286415.466381,
+					"us": 381,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 466,
+					"year": 2020
+				},
+				"text": "Done.",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			},
+			{
+				"id": 7,
+				"timestamp": {
+					"t": 1608286415.4664342,
+					"us": 434,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 466,
+					"year": 2020
+				},
+				"text": "Terminating with success after: 00:00:00",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			}
+		],
+		"loglevel": "INFO"
+	},
+	{
+		"id": 8,
+		"timestamp": {
+			"t": 1608286415.466607,
+			"us": 607,
+			"hour": 11,
+			"second": 35,
+			"minute": 13,
+			"day": 18,
+			"month": 12,
+			"ms": 466,
+			"year": 2020
+		},
+		"text": "Connecting to backup repository and preparing backup",
+		"indent": 0,
+		"logleveln": 40,
+		"type": "desc",
+		"children": [
+			{
+				"id": 9,
+				"timestamp": {
+					"t": 1608286415.4666734,
+					"us": 673,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 466,
+					"year": 2020
+				},
+				"text": "Initializinig connection ...",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [
+					{
+						"id": 10,
+						"timestamp": {
+							"t": 1608286415.4668338,
+							"us": 834,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 466,
+							"year": 2020
+						},
+						"text": "Contacting Thaniya server to allocate backup slot ...",
+						"indent": 2,
+						"logleveln": 40,
+						"type": "desc",
+						"children": [],
+						"loglevel": "INFO"
+					},
+					{
+						"id": 11,
+						"timestamp": {
+							"t": 1608286415.53088,
+							"us": 880,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 530,
+							"year": 2020
+						},
+						"text": "Mounting sftp::thaniya_05@192.168.10.100:/ at /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF ...",
+						"indent": 2,
+						"logleveln": 40,
+						"type": "txt",
+						"loglevel": "INFO"
+					},
+					{
+						"id": 12,
+						"timestamp": {
+							"t": 1608286415.9173224,
+							"us": 322,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 917,
+							"year": 2020
+						},
+						"text": "Mounted.",
+						"indent": 2,
+						"logleveln": 30,
+						"type": "txt",
+						"loglevel": "NOTICE"
+					}
+				],
+				"loglevel": "INFO"
+			},
+			{
+				"id": 13,
+				"timestamp": {
+					"t": 1608286415.9179342,
+					"us": 934,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 917,
+					"year": 2020
+				},
+				"text": "Selecting target directory",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [],
+				"loglevel": "INFO"
+			},
+			{
+				"id": 14,
+				"timestamp": {
+					"t": 1608286415.918124,
+					"us": 124,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 918,
+					"year": 2020
+				},
+				"text": "Selected target directory: '/mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload'",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			},
+			{
+				"id": 15,
+				"timestamp": {
+					"t": 1608286415.923113,
+					"us": 113,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 923,
+					"year": 2020
+				},
+				"text": "Ensuring directory exists: '/mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload'",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [
+					{
+						"id": 16,
+						"timestamp": {
+							"t": 1608286415.9247162,
+							"us": 716,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 924,
+							"year": 2020
+						},
+						"text": "Setting directory mode: rwx------",
+						"indent": 2,
+						"logleveln": 30,
+						"type": "txt",
+						"loglevel": "NOTICE"
+					}
+				],
+				"loglevel": "INFO"
+			},
+			{
+				"id": 17,
+				"timestamp": {
+					"t": 1608286415.9253397,
+					"us": 340,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 925,
+					"year": 2020
+				},
+				"text": "Writing to: /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/_backup_stats.json",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			},
+			{
+				"id": 18,
+				"timestamp": {
+					"t": 1608286415.927487,
+					"us": 487,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 927,
+					"year": 2020
+				},
+				"text": "Done.",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			},
+			{
+				"id": 19,
+				"timestamp": {
+					"t": 1608286415.9275897,
+					"us": 590,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 927,
+					"year": 2020
+				},
+				"text": "Terminating with success after: 00:00:00",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			}
+		],
+		"loglevel": "INFO"
+	},
+	{
+		"id": 20,
+		"timestamp": {
+			"t": 1608286415.9279087,
+			"us": 909,
+			"hour": 11,
+			"second": 35,
+			"minute": 13,
+			"day": 18,
+			"month": 12,
+			"ms": 927,
+			"year": 2020
+		},
+		"text": "Writing the backup data",
+		"indent": 0,
+		"logleveln": 40,
+		"type": "desc",
+		"children": [
+			{
+				"id": 21,
+				"timestamp": {
+					"t": 1608286415.9279947,
+					"us": 995,
+					"hour": 11,
+					"second": 35,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 927,
+					"year": 2020
+				},
+				"text": "Performing backup of directory: '/etc'",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [
+					{
+						"id": 22,
+						"timestamp": {
+							"t": 1608286415.928131,
+							"us": 131,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 928,
+							"year": 2020
+						},
+						"text": "Creating tar file '/mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/etc.tar' ...",
+						"indent": 2,
+						"logleveln": 40,
+						"type": "desc",
+						"children": [],
+						"loglevel": "INFO"
+					},
+					{
+						"id": 23,
+						"timestamp": {
+							"t": 1608286415.930349,
+							"us": 349,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 930,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/.pwd.lock'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 24,
+						"timestamp": {
+							"t": 1608286415.9339054,
+							"us": 905,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 933,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/at.deny'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 25,
+						"timestamp": {
+							"t": 1608286415.9461017,
+							"us": 102,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 946,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/group-'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 26,
+						"timestamp": {
+							"t": 1608286415.946438,
+							"us": 438,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 946,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/gshadow'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 27,
+						"timestamp": {
+							"t": 1608286415.9466069,
+							"us": 607,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 946,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/gshadow-'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 28,
+						"timestamp": {
+							"t": 1608286415.9728148,
+							"us": 815,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 972,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/passwd-'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 29,
+						"timestamp": {
+							"t": 1608286415.9869952,
+							"us": 995,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 986,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/shadow'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 30,
+						"timestamp": {
+							"t": 1608286415.9871213,
+							"us": 121,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 987,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/shadow-'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 31,
+						"timestamp": {
+							"t": 1608286415.9889655,
+							"us": 966,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 988,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/subgid-'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 32,
+						"timestamp": {
+							"t": 1608286415.9892771,
+							"us": 277,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 989,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/subuid-'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 33,
+						"timestamp": {
+							"t": 1608286415.9895172,
+							"us": 517,
+							"hour": 11,
+							"second": 35,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 989,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/sudoers'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 34,
+						"timestamp": {
+							"t": 1608286416.0621974,
+							"us": 197,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 62,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/classes.conf'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 35,
+						"timestamp": {
+							"t": 1608286416.0623138,
+							"us": 314,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 62,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/classes.conf.O'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 36,
+						"timestamp": {
+							"t": 1608286416.0656934,
+							"us": 693,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 65,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/printers.conf'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 37,
+						"timestamp": {
+							"t": 1608286416.0658052,
+							"us": 805,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 65,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/printers.conf.O'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 38,
+						"timestamp": {
+							"t": 1608286416.0663152,
+							"us": 315,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 66,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/subscriptions.conf'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 39,
+						"timestamp": {
+							"t": 1608286416.0663962,
+							"us": 396,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 66,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/subscriptions.conf.O'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 40,
+						"timestamp": {
+							"t": 1608286416.068549,
+							"us": 549,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 68,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/default/cacerts'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 41,
+						"timestamp": {
+							"t": 1608286416.0755966,
+							"us": 597,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 75,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/docker/key.json'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 42,
+						"timestamp": {
+							"t": 1608286416.0774758,
+							"us": 476,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 77,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/exim4/passwd.client'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 43,
+						"timestamp": {
+							"t": 1608286416.0859246,
+							"us": 925,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 85,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/gufw/Home.profile'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 44,
+						"timestamp": {
+							"t": 1608286416.0860686,
+							"us": 69,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 86,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/gufw/Office.profile'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 45,
+						"timestamp": {
+							"t": 1608286416.0861473,
+							"us": 147,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 86,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/gufw/Public.profile'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 46,
+						"timestamp": {
+							"t": 1608286416.0863125,
+							"us": 313,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 86,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/gufw/gufw.cfg'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 47,
+						"timestamp": {
+							"t": 1608286416.1194932,
+							"us": 493,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 119,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/kvmmgr/kvmmgr.cfg'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 48,
+						"timestamp": {
+							"t": 1608286416.1349645,
+							"us": 964,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 134,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/mysql/debian.cnf'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 49,
+						"timestamp": {
+							"t": 1608286416.1472087,
+							"us": 209,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 147,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ppp/chap-secrets'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 50,
+						"timestamp": {
+							"t": 1608286416.1502366,
+							"us": 237,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 150,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ppp/pap-secrets'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 51,
+						"timestamp": {
+							"t": 1608286416.2017481,
+							"us": 748,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 201,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/security/opasswd'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 52,
+						"timestamp": {
+							"t": 1608286416.206569,
+							"us": 569,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 206,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ssh/ssh_host_dsa_key'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 53,
+						"timestamp": {
+							"t": 1608286416.2068193,
+							"us": 819,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 206,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ssh/ssh_host_ecdsa_key'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 54,
+						"timestamp": {
+							"t": 1608286416.2071438,
+							"us": 144,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 207,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ssh/ssh_host_ed25519_key'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 55,
+						"timestamp": {
+							"t": 1608286416.2073493,
+							"us": 349,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 207,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ssh/ssh_host_rsa_key'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 56,
+						"timestamp": {
+							"t": 1608286416.2086444,
+							"us": 644,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 208,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/sudoers.d/99-snapd.conf'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 57,
+						"timestamp": {
+							"t": 1608286416.2087455,
+							"us": 745,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 208,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/sudoers.d/README'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 58,
+						"timestamp": {
+							"t": 1608286416.2088513,
+							"us": 851,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 208,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/sudoers.d/backupmaster'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 59,
+						"timestamp": {
+							"t": 1608286416.2089431,
+							"us": 943,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 208,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/sudoers.d/thaniya'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 60,
+						"timestamp": {
+							"t": 1608286416.2090259,
+							"us": 26,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 209,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/sudoers.d/woodoo'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 61,
+						"timestamp": {
+							"t": 1608286416.217538,
+							"us": 538,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 217,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/after.init'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 62,
+						"timestamp": {
+							"t": 1608286416.2176437,
+							"us": 644,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 217,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/after.rules'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 63,
+						"timestamp": {
+							"t": 1608286416.21772,
+							"us": 720,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 217,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/after6.rules'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 64,
+						"timestamp": {
+							"t": 1608286416.2178864,
+							"us": 886,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 217,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/before.init'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 65,
+						"timestamp": {
+							"t": 1608286416.2179594,
+							"us": 959,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 217,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/before.rules'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 66,
+						"timestamp": {
+							"t": 1608286416.218032,
+							"us": 32,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 218,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/before6.rules'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 67,
+						"timestamp": {
+							"t": 1608286416.2183995,
+							"us": 400,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 218,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/user.rules'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 68,
+						"timestamp": {
+							"t": 1608286416.2185092,
+							"us": 509,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 218,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ufw/user6.rules'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 69,
+						"timestamp": {
+							"t": 1608286416.2208536,
+							"us": 854,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 220,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/vpnc'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 70,
+						"timestamp": {
+							"t": 1608286416.2277822,
+							"us": 782,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 227,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/NetworkManager/system-connections/Annika'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 71,
+						"timestamp": {
+							"t": 1608286416.2278905,
+							"us": 890,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 227,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/NetworkManager/system-connections/GoeNet VPN'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 72,
+						"timestamp": {
+							"t": 1608286416.2279775,
+							"us": 978,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 227,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/NetworkManager/system-connections/X235T'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 73,
+						"timestamp": {
+							"t": 1608286416.228056,
+							"us": 56,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 228,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/NetworkManager/system-connections/X236T'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 74,
+						"timestamp": {
+							"t": 1608286416.228132,
+							"us": 132,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 228,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/NetworkManager/system-connections/br0'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 75,
+						"timestamp": {
+							"t": 1608286416.2282088,
+							"us": 209,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 228,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/NetworkManager/system-connections/enp0s31f6'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 76,
+						"timestamp": {
+							"t": 1608286416.2661815,
+							"us": 181,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/lightdm-guest-session'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 77,
+						"timestamp": {
+							"t": 1608286416.2663612,
+							"us": 361,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/sbin.dhclient'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 78,
+						"timestamp": {
+							"t": 1608286416.2664845,
+							"us": 484,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.bin.evince'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 79,
+						"timestamp": {
+							"t": 1608286416.2665696,
+							"us": 570,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.lib.snapd.snap-confine.real'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 80,
+						"timestamp": {
+							"t": 1608286416.2666485,
+							"us": 649,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.lib.unreal'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 81,
+						"timestamp": {
+							"t": 1608286416.2667391,
+							"us": 739,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.cups-browsed'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 82,
+						"timestamp": {
+							"t": 1608286416.2668114,
+							"us": 811,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.cupsd'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 83,
+						"timestamp": {
+							"t": 1608286416.2668822,
+							"us": 882,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.mysqld'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 84,
+						"timestamp": {
+							"t": 1608286416.2669513,
+							"us": 951,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 266,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.ntpd'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 85,
+						"timestamp": {
+							"t": 1608286416.26702,
+							"us": 20,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 267,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/apparmor.d/cache/usr.sbin.tcpdump'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 86,
+						"timestamp": {
+							"t": 1608286416.335045,
+							"us": 45,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 335,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/ppd/BrotherHL-L2375DW.ppd'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 87,
+						"timestamp": {
+							"t": 1608286416.3351622,
+							"us": 162,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 335,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/ppd/KONICA-MINOLTA-pp5650-PPD.ppd'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 88,
+						"timestamp": {
+							"t": 1608286416.3356464,
+							"us": 646,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 335,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/cups/ssl'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 89,
+						"timestamp": {
+							"t": 1608286416.428102,
+							"us": 102,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 428,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/mosquitto/security'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 90,
+						"timestamp": {
+							"t": 1608286416.4360998,
+							"us": 100,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 436,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/polkit-1/localauthority'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					},
+					{
+						"id": 91,
+						"timestamp": {
+							"t": 1608286416.4841068,
+							"us": 107,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 484,
+							"year": 2020
+						},
+						"text": "[Errno 13] Permission denied: '/etc/ssl/private'",
+						"indent": 2,
+						"logleveln": 60,
+						"type": "txt",
+						"loglevel": "WARNING"
+					}
+				],
+				"loglevel": "INFO"
+			},
+			{
+				"id": 92,
+				"timestamp": {
+					"t": 1608286416.6216955,
+					"us": 696,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 621,
+					"year": 2020
+				},
+				"text": "All backup tasks completed.",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			},
+			{
+				"id": 93,
+				"timestamp": {
+					"t": 1608286416.621782,
+					"us": 782,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 621,
+					"year": 2020
+				},
+				"text": "Calculating size of backup performed ...",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [],
+				"loglevel": "INFO"
+			},
+			{
+				"id": 94,
+				"timestamp": {
+					"t": 1608286416.6230276,
+					"us": 28,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 623,
+					"year": 2020
+				},
+				"text": "Total bytes written: 12.4M",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "txt",
+				"loglevel": "INFO"
+			},
+			{
+				"id": 95,
+				"timestamp": {
+					"t": 1608286416.6230834,
+					"us": 83,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 623,
+					"year": 2020
+				},
+				"text": "Average writing speed: 17.8M/s",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "txt",
+				"loglevel": "INFO"
+			},
+			{
+				"id": 96,
+				"timestamp": {
+					"t": 1608286416.6232278,
+					"us": 228,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 623,
+					"year": 2020
+				},
+				"text": "Done.",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			},
+			{
+				"id": 97,
+				"timestamp": {
+					"t": 1608286416.623268,
+					"us": 268,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 623,
+					"year": 2020
+				},
+				"text": "Terminating with success after: 00:00:00",
+				"indent": 1,
+				"logleveln": 30,
+				"type": "txt",
+				"loglevel": "NOTICE"
+			}
+		],
+		"loglevel": "INFO"
+	},
+	{
+		"id": 98,
+		"timestamp": {
+			"t": 1608286416.6234028,
+			"us": 403,
+			"hour": 11,
+			"second": 36,
+			"minute": 13,
+			"day": 18,
+			"month": 12,
+			"ms": 623,
+			"year": 2020
+		},
+		"text": "Finalizing backup",
+		"indent": 0,
+		"logleveln": 40,
+		"type": "desc",
+		"children": [
+			{
+				"id": 99,
+				"timestamp": {
+					"t": 1608286416.6235287,
+					"us": 529,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 623,
+					"year": 2020
+				},
+				"text": "There were warnings!",
+				"indent": 1,
+				"logleveln": 60,
+				"type": "txt",
+				"loglevel": "WARNING"
+			},
+			{
+				"id": 100,
+				"timestamp": {
+					"t": 1608286416.623556,
+					"us": 556,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 623,
+					"year": 2020
+				},
+				"text": "Backup successfully completed.",
+				"indent": 1,
+				"logleveln": 50,
+				"type": "txt",
+				"loglevel": "SUCCESS"
+			},
+			{
+				"id": 101,
+				"timestamp": {
+					"t": 1608286416.6235769,
+					"us": 577,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 623,
+					"year": 2020
+				},
+				"text": "Writing stats ...",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [
+					{
+						"id": 102,
+						"timestamp": {
+							"t": 1608286416.6236124,
+							"us": 612,
+							"hour": 11,
+							"second": 36,
+							"minute": 13,
+							"day": 18,
+							"month": 12,
+							"ms": 623,
+							"year": 2020
+						},
+						"text": "Writing to: /mounts/ramdisk/tmpzxf58rg7.tmp/h0VYBZSWZzuiO4nFbXGUcndwjifVGdpF/upload/_backup_stats.json",
+						"indent": 2,
+						"logleveln": 30,
+						"type": "txt",
+						"loglevel": "NOTICE"
+					}
+				],
+				"loglevel": "INFO"
+			},
+			{
+				"id": 103,
+				"timestamp": {
+					"t": 1608286416.6247065,
+					"us": 707,
+					"hour": 11,
+					"second": 36,
+					"minute": 13,
+					"day": 18,
+					"month": 12,
+					"ms": 624,
+					"year": 2020
+				},
+				"text": "Writing log ...",
+				"indent": 1,
+				"logleveln": 40,
+				"type": "desc",
+				"children": [],
+				"loglevel": "INFO"
+			}
+		],
+		"loglevel": "INFO"
+	}
+]

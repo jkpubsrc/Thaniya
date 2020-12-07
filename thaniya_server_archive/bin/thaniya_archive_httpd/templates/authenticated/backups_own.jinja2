@@ -1,0 +1,39 @@
+{% extends "authenticated/base.jinja2" %}
+
+{% block maincontent %}
+
+<main class="article">
+	<div class="container">
+		<h2>Backups</h2>
+
+		{% for dtDate, backupList in backupGroupList %}
+			<h3>{{ dtDate|formatDate }}</h3>
+
+			<table style="margin-bottom:1.8em;padding:8px;background-color:#00000040;">
+			<tr>
+				<th>User</th>
+				<th>System</th>
+				<th>Identifier</th>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Size (uploaded)</th>
+				<th>Size (archived)</th>
+			</tr>
+			{% for b in backupList %}
+				<tr>
+					<td style="font-size:80%">{{ b.backupUserName }}</td>
+					<td style="font-size:80%">{{ b.systemName }}</td>
+					<td style="font-size:80%">{{ b.backupIdentifier }}</td>
+					<td style="font-size:80%">{{ b.timeStamp|formatDate }}</td>
+					<td style="font-size:80%">{{ b.timeStamp|formatTime }}</td>
+					<td style="font-size:80%; text-align:right">{{ b.sizeInBytesUploaded|formatBytes }}</td>
+					<td style="font-size:80%; text-align:right">{{ b.sizeInBytesArchived|formatBytes }}</td>
+				</tr>
+			{% endfor %}
+			</table>
+		{% endfor %}
+
+	</div>
+</main>
+
+{% endblock %}

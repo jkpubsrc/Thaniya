@@ -1,0 +1,36 @@
+{% extends "authenticated/base.jinja2" %}
+
+{% block maincontent %}
+<main class="hugecentertitle">
+	<div class="container">
+		<h1>Set Backup Upload Password</h1>
+
+		<p style="max-width: 750px">
+			To set a new backup upload password for clients please provide your login password for security.
+		</p>
+
+		<p style="max-width: 750px">
+		</p>
+
+		<form method="POST" action="/do_chuploadpasswd_own">
+			{{ form_flash_errors() }}
+
+			<div class="form-element-group">
+				<label for="login_password">Login password:</label>
+				<input type="password" id="login_password" name="login_password" placeholder="Your login password">
+
+				<label for="upload_password">New upload password:</label>
+				<textarea type="text" id="upload_password" name="upload_password" style="resize: none;" readonly>{{ newBackupUploadPwd }}</textarea>
+
+				<div></div>
+				<div class="form-button-group">
+					<button type="button" onclick="document.location='{{ url_for('main.profile') }}'">Cancel</button>
+					<button type="submit">Change</button>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</main>
+{% endblock %}

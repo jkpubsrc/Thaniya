@@ -1,0 +1,71 @@
+{
+	"documentation": [],
+	"magic": {
+		"magic": "packageinfo",
+		"version": 2
+	},
+	"meta": {
+		"authors": [
+			{
+				"name": "Jürgen Knauth",
+				"email": "pubsrc@binary-overflow.de"
+			}
+		],
+		"description": "This python module implements the Thania Backup Client.",
+		"development_status": "beta",
+		"keywords": [
+			"backup"
+		],
+		"language": "python3",
+		"license": "Apache2",
+		"name": "thaniya_client",
+		"packageClass": "python-module",
+		"version": "0.2020.12.7",
+	},
+	"repositories": [
+		{
+			"type": "github",
+			"user": "jkpubsrc",
+			"project": "python-module-thaniya-client",
+			"devon_publish": true
+		},
+		{
+			"type": "pypy",
+			"project": "thaniya_client",
+			"devon_publish": true
+		}
+	],
+	"source": {
+		"packages": [
+			"thaniya_client",
+			"thaniya_client.utils",
+			"thaniya_client.tools",
+			"thaniya_client.tasks",
+			"thaniya_client.cfg",
+			"thaniya_client.server",
+		],
+		"extra_data_files": [
+		],
+		"extra_binary_files": [
+			"bin/thania_helper_mysql_get_db_size.py"
+		]
+	},
+	"requirements": {
+		"system_apt_packages": [],
+		"python_packages": [
+			// "mysql-connector-python",				// NOTE: does not work; instead install with apt: "python3-mysql.connector"
+			"jk_utils",
+			"jk_json",
+			"jk_logging",
+			"jk_mounting",
+			"jk_simpleexec",
+			// "jk_pathpatternmatcher2",				// NOTE: required! but not yet on github?
+			"jk_typing",
+			"jk_pwdinput",
+			"shutils",									// NOTE: required by ThaniaIO
+		],
+		"python_packages_dev": [
+		]
+	}
+}
+
