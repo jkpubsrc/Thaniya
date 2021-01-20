@@ -28,5 +28,6 @@
 		"thaniya_server_archive",
 		"thaniya_server_sudo",
 		"thaniya_server_upload",
+		"thaniya_server_ctrl",
 	]
 }

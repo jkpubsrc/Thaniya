@@ -46,7 +46,7 @@ setup(
 		"thaniya_server_archive.archive",
 		"thaniya_server_archive.volumes",
 	],
-	version = "0.2021.1.20",
+	version = "0.2021.1.20.1",
 	zip_safe = False,
 	long_description = readme(),
 	long_description_content_type="text/markdown",
