@@ -26,6 +26,7 @@ from ._CLICmd_user_create import _CLICmd_user_create
 from ._CLICmd_user_setpwd import _CLICmd_user_setpwd
 from ._CLICmd_user_delete import _CLICmd_user_delete
 from ._CLICmd_user_setuploadpwd import _CLICmd_user_setuploadpwd
+from ._CLICmd_user_privileges import _CLICmd_user_privileges
 from ._CLICmd_slot_list import _CLICmd_slot_list
 from ._CLICmd_slot_reset import _CLICmd_slot_reset
 from ._CLICmd_volumes_list import _CLICmd_volumes_list
@@ -90,6 +91,7 @@ class CLIThaniyaServerCtrl(AbstractCLIApp):
 			_CLICmd_user_setpwd,
 			_CLICmd_user_delete,
 			_CLICmd_user_setuploadpwd,
+			_CLICmd_user_privileges,
 			_CLICmd_slot_list,
 			_CLICmd_slot_reset,
 			_CLICmd_volumes_list,

@@ -53,6 +53,17 @@ class BackupUserManager(object):
 	## Public Properties
 	################################################################################################################################
 
+	#
+	# Return a list of all privileges this class supports
+	#
+	@property
+	def supportedPrivileges(self) -> list:
+		return sorted(self.__privilegeDefaults.keys())
+	#
+
+	#
+	# @return	BackupUser[] users			Returns a list of all user objects
+	#
 	@property
 	def users(self) -> list:
 		ret = []
