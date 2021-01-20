@@ -7,7 +7,6 @@ import json
 import typing
 import sys
 import time
-import shutil
 
 import jk_json
 import jk_utils

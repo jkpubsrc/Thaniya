@@ -10,12 +10,6 @@ from thaniya_client.tasks import *
 
 
 
-LOGIN = "foo"
-PASSWORD = "64563d1146a7b045360bb15901ef0aa3826ae6f4a66ec3869921a3b772d10614"
-HOSTNAME = "localhost"
-UPLOAD_HTTP_PORT = 9002
-
-
 
 
 
@@ -23,13 +17,15 @@ UPLOAD_HTTP_PORT = 9002
 
 with testPrg(__file__, hasDataDir=False, hasTempDir=False) as (ioCtx, dataDirPath, tempDirPath, log):
 
+	cfg = jk_json.load("cfg-test-api.jsonc")
+
 	driver = ThaniyaBackupDriver(
 		backupConnector = BackupConnector_ThaniyaSFTPMount(),
 		backupConnectorParameters = {
-			"thaniya_serverLogin": LOGIN,
-			"thaniya_serverPassword": PASSWORD,
-			"thaniya_serverHost": HOSTNAME,
-			"thaniya_serverPort": UPLOAD_HTTP_PORT,
+			"thaniya_serverLogin": cfg["LOGIN"],
+			"thaniya_serverPassword": cfg["PASSWORD"],
+			"thaniya_serverHost": cfg["HOSTNAME"],
+			"thaniya_serverPort": cfg["UPLOAD_HTTP_PORT"],
 		},
 		targetDirStrategy = TargetDirectoryStrategy_StaticDir("upload"),			# all uploads *must* go to this subdirectory!
 	)

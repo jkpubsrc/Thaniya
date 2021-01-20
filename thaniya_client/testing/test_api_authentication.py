@@ -10,12 +10,16 @@ import thaniya_client.cfg
 
 
 
+
+
+
+
+
 with testPrg(__file__, hasDataDir=False, hasTempDir=False) as (ioCtx, dataDirPath, tempDirPath, log):
 
-	#cfg = thaniya_client.cfg.ThaniyaClientCfg.load(log)
-	#print(cfg.getValue("general", "tempBaseDir"))
+	cfg = jk_json.load("cfg-test-api.jsonc")
 
-	api = thaniya_client.server.ThaniyaServerAPIConnectorV1("localhost", 9002)
+	api = thaniya_client.server.ThaniyaServerAPIConnectorV1(cfg["HOSTNAME"], cfg["UPLOAD_HTTP_PORT"])
 	
 	#api.noopAuth()
 
