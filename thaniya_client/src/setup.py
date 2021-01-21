@@ -27,8 +27,6 @@ setup(
 	include_package_data = False,
 	install_requires = [
 		"jk_utils",
-		"jk_mediawiki",
-		"jk_typo3",
 		"jk_json",
 		"jk_logging",
 		"jk_mounting",
@@ -47,13 +45,12 @@ setup(
 		"thaniya_client.utils",
 		"thaniya_client.tools",
 		"thaniya_client.tasks",
-		"thaniya_client.cfg",
 		"thaniya_client.server",
 	],
 	scripts = [
 		"bin/thania_helper_mysql_get_db_size.py",
 	],
-	version = "0.2020.12.7",
+	version = "0.2021.1.21",
 	zip_safe = False,
 	long_description = readme(),
 	long_description_content_type="text/markdown",

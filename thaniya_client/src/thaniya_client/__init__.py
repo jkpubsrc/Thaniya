@@ -1,7 +1,7 @@
 ﻿
 
 
-__version__ = "0.2020.12.7"
+__version__ = "0.2021.1.21"
 
 
 
@@ -32,7 +32,6 @@ from .TargetDirectoryStrategy_DateDefault import TargetDirectoryStrategy_DateDef
 
 from .ThaniyaClientCfg import ThaniyaClientCfg
 from .ThaniyaFactory import ThaniyaFactory
-
 
 
 

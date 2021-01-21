@@ -20,7 +20,7 @@
 		"license": "Apache2",
 		"name": "thaniya_client",
 		"packageClass": "python-module",
-		"version": "0.2020.12.7",
+		"version": "0.2021.1.21",
 	},
 	"repositories": [
 		{
@@ -41,7 +41,6 @@
 			"thaniya_client.utils",
 			"thaniya_client.tools",
 			"thaniya_client.tasks",
-			"thaniya_client.cfg",
 			"thaniya_client.server",
 		],
 		"extra_data_files": [

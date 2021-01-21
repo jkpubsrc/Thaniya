@@ -20,5 +20,12 @@
 	* improved: API password management
 	* improved: Thaniya client implementation
 	* added: Thaniya client examples
+	* improved: removed redundant code from former refactoring
+	* fixed: ambiguos configuration file implementations
+
+
+
+
+
 
 

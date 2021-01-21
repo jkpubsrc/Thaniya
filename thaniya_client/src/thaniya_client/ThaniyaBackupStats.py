@@ -6,8 +6,8 @@ import json
 import jk_json
 import jk_typing
 
-from .cfg.CfgKeyValueDefinition import CfgKeyValueDefinition
-from .cfg.AbstractCfgComponent import AbstractCfgComponent
+from thaniya_common.cfg import CfgKeyValueDefinition
+from thaniya_common.cfg import AbstractCfgComponent
 
 
 

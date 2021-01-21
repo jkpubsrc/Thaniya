@@ -26,6 +26,11 @@ setup(
 	description = "This python module is part of the Thaniya server. It provides a way to run scripts via sudo in a controlled way.",
 	include_package_data = False,
 	install_requires = [
+		"jk_json",
+		"jk_logging",
+		"jk_prettyprintobj",
+		"jk_typing",
+		"jk_utils",
 	],
 	keywords = [
 		"sudo",
@@ -36,7 +41,7 @@ setup(
 	packages = [
 		"thaniya_server_sudo",
 	],
-	version = "0.2021.1.18",
+	version = "0.2021.1.21",
 	zip_safe = False,
 	long_description = readme(),
 	long_description_content_type="text/markdown",

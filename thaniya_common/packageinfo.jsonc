@@ -5,7 +5,7 @@
 	},
 	"meta": {
 		"name": "thaniya_common",
-		"version": "0.2021.1.18",
+		"version": "0.2021.1.21",
 		"packageClass": "python-module",
 		"language": "python3",
 		"development_status": "alpha",

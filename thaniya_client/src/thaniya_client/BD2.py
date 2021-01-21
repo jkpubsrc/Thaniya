@@ -24,7 +24,8 @@ from .ThaniyaBackupStats import ThaniyaBackupStats
 from .utils.PrivateTempDir import PrivateTempDir
 from .tasks.AbstractThaniyaTask import AbstractThaniyaTask
 from .ILocalBackupOriginInfo import ILocalBackupOriginInfo
-from .cfg.ThaniyaClientCfg import ThaniyaClientCfg
+from .ThaniyaClientCfg import ThaniyaClientCfg
+
 
 
 
@@ -63,11 +64,10 @@ class BD2(ILocalBackupOriginInfo):
 	#												represents "the backup".
 	#
 	@jk_typing.checkFunctionSignature()
-	def __init__(self, backupIdentifier:str, mainLog:jk_logging.AbstractLogger):
+	def __init__(self, cfg:ThaniyaClientCfg, backupIdentifier:str, mainLog:jk_logging.AbstractLogger):
 		assert backupIdentifier
 
-		with mainLog.descend("Loading configuration") as log2:
-			self.__cfg = ThaniyaClientCfg.load(log2)
+		self.__cfg = cfg
 
 		self.__beginDateTime = None
 		self.__beginEpochTime = None
@@ -216,9 +216,9 @@ class BD2(ILocalBackupOriginInfo):
 			self.__dlog,
 		)
 		self.__log.notice("Initializing backup context ...")
-		self.__log.notice("tempBaseDir = " + repr(self.__cfg.getValue("general", "tempBaseDir")))
+		self.__log.notice("tempBaseDir = " + repr(self.__cfg.general.getValue("tempBaseDir")))
 
-		self.__privateTempDir = PrivateTempDir(self.__cfg.getValue("general", "tempBaseDir"))
+		self.__privateTempDir = PrivateTempDir(self.__cfg.general.getValue("tempBaseDir"))
 		self.__log.notice("Using private temporary directory: " + str(self.__privateTempDir))
 
 		self.__beginDateTime = datetime.datetime.now()

@@ -36,8 +36,8 @@ import thaniya_server_sudo
 
 ...
 
-Contact Information
--------------------
+Contact
+-------
 
 This work is open source. Therefore you can use this work for free.
 

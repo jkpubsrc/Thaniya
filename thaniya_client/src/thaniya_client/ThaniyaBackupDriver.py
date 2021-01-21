@@ -27,6 +27,8 @@ from .AbstractTargetDirectoryStrategy import AbstractTargetDirectoryStrategy
 from .ThaniyaBackupStats import ThaniyaBackupStats
 from .tasks.AbstractThaniyaTask import AbstractThaniyaTask
 from .BD2 import BD2
+from .ThaniyaClientCfg import ThaniyaClientCfg
+
 
 
 
@@ -50,6 +52,7 @@ class ThaniyaBackupDriver(object):
 		backupConnector:AbstractBackupConnector,
 		backupConnectorParameters:dict,
 		targetDirStrategy:typing.Union[AbstractTargetDirectoryStrategy,None] = None,
+		cfg:ThaniyaClientCfg = None,
 		):
 
 		self.__targetDirStrategy = None			# AbstractTargetDirectoryStrategy
@@ -58,6 +61,10 @@ class ThaniyaBackupDriver(object):
 
 		self.__setTargetDirStrategy(targetDirStrategy)
 		self.__setConnector(backupConnector, backupConnectorParameters)
+
+		if cfg is None:
+			cfg = ThaniyaClientCfg.load()
+		self.__cfg = cfg
 	#
 
 	################################################################################################################################
@@ -441,7 +448,7 @@ class ThaniyaBackupDriver(object):
 
 		mainLog = jk_logging.ConsoleLogger.create(logMsgFormatter=jk_logging.COLOR_LOG_MESSAGE_FORMATTER)
 
-		with BD2(backupIdentifier, mainLog) as bd2:
+		with BD2(self.__cfg, backupIdentifier, mainLog) as bd2:
 
 			try:
 
@@ -465,7 +472,7 @@ class ThaniyaBackupDriver(object):
 
 		mainLog = jk_logging.ConsoleLogger.create(logMsgFormatter=jk_logging.COLOR_LOG_MESSAGE_FORMATTER)
 
-		with BD2(backupIdentifier, mainLog) as bd2:
+		with BD2(self.__cfg, backupIdentifier, mainLog) as bd2:
 			nExpectedBytesToWrite = self.__perform_calcDiskSpaceRequired(bd2, backupTasks)
 			assert nExpectedBytesToWrite >= 0
 

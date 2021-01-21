@@ -27,6 +27,22 @@ class _Magic(CfgComponent_Magic):
 
 
 
+class _GeneralV1(AbstractCfgComponent):
+
+	__VALID_KEYS = [
+		CfgKeyValueDefinition("tempBaseDir",				str,		True),
+	]
+
+	def __init__(self):
+		super().__init__(_GeneralV1.__VALID_KEYS)
+
+		self._tempDir = None					# str
+	#
+
+#
+
+
+
 class _ServerV1(AbstractCfgComponent):
 
 	VALID_KEYS = [
@@ -63,6 +79,7 @@ class ThaniyaClientCfg(AbstractAppCfg):
 			_Magic,
 			False,
 			{
+				"general": _GeneralV1(),
 				"server": _ServerV1(),
 			}
 		)
@@ -71,6 +88,11 @@ class ThaniyaClientCfg(AbstractAppCfg):
 	################################################################################################################################
 	## Public Properties
 	################################################################################################################################
+
+	@property
+	def general(self) -> AbstractCfgComponent:
+		return self._groups["general"]
+	#
 
 	@property
 	def server(self) -> AbstractCfgComponent:

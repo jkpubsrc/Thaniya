@@ -75,8 +75,9 @@ class ThaniyaFactory(object):
 		thaniya_apiPassword:str = None,
 		thaniya_port:str = None) -> ThaniyaBackupDriver:
 
+		cfg = ThaniyaClientCfg.load()
+
 		if (thaniya_host is None) and (thaniya_port is None) and (thaniya_login is None) and (thaniya_apiPassword is None):
-			cfg = ThaniyaClientCfg.load()
 			p = {
 				"thaniya_host": cfg.server["host"],
 				"thaniya_port": cfg.server["port"],
@@ -104,6 +105,7 @@ class ThaniyaFactory(object):
 			backupConnector = BackupConnector_ThaniyaSFTPMount(),
 			backupConnectorParameters = p,
 			targetDirStrategy = TargetDirectoryStrategy_StaticDir("upload"),			# all uploads *must* go to this subdirectory!
+			cfg = cfg,
 		)
 
 		return driver
