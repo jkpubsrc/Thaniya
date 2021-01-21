@@ -73,29 +73,29 @@ class BackupConnector_ThaniyaSFTPMount(AbstractBackupConnector, BackupConnectorM
 		self._thaniya_login = parameters["thaniya_login"]
 		self._thaniya_apiPassword = parameters["thaniya_apiPassword"]
 
-		with ctx.descend("Contacting Thaniya server to allocate backup slot ...") as log2:
+		with ctx.descend("Contacting Thaniya server to allocate backup slot ...") as ctx2:
 			con = ThaniyaServerAPIConnectorV1(self._thaniya_host, self._thaniya_tcpPort)
 			con.authenticate(self._thaniya_login, self._thaniya_apiPassword)
 
 			jSlotData = con.allocateSlot(nExpectedNumberOfBytesToWrite)
 
 			self._thaniya_uploadSlotID = jSlotData["slotID"]
-			log2.notice("Received: slotID = " + jSlotData["slotID"])
+			ctx2.log.notice("Received: slotID = " + jSlotData["slotID"])
 
 			self._thaniya_uploadHost = jSlotData["ipaddr"]
-			log2.notice("Received: ipaddr = " + jSlotData["ipaddr"])
+			ctx2.log.notice("Received: ipaddr = " + jSlotData["ipaddr"])
 
 			self._thaniya_uploadPort = jSlotData["port"]
-			log2.notice("Received: port = " + str(jSlotData["port"]))
+			ctx2.log.notice("Received: port = " + str(jSlotData["port"]))
 
 			self._thaniya_uploadLogin = jSlotData["login"]
-			log2.notice("Received: login = " + jSlotData["login"])
+			ctx2.log.notice("Received: login = " + jSlotData["login"])
 
 			self._thaniya_uploadPwd = jSlotData["pwd"]
-			log2.notice("Received: pwd = ....")
+			ctx2.log.notice("Received: pwd = ....")
 
 			self._thaniya_uploadMountDirPath = jSlotData["mountDir"]
-			log2.notice("Received: mountDir = " + jSlotData["mountDir"])
+			ctx2.log.notice("Received: mountDir = " + jSlotData["mountDir"])
 
 		ctx.log.info("Mounting sftp::{}@{}:{} at {} ...".format(self._thaniya_uploadLogin, self._thaniya_uploadHost, self._thaniya_uploadMountDirPath, self.__localMountDirPath))
 		self._mountSSH(self.__localMountDirPath, self._thaniya_uploadHost, self._thaniya_uploadPort, self._thaniya_uploadLogin, self._thaniya_uploadPwd, self._thaniya_uploadMountDirPath)

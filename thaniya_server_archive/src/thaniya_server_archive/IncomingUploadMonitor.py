@@ -67,7 +67,7 @@ class IncomingUploadMonitor(object):
 
 		# TODO: use proper file object for this
 		jStats = jk_json.loadFromFile(os.path.join(dirPath, "_backup_stats.json"))		# TODO: move this file name to some kind of `constants.py`
-		assert jStats["magic"]["magic"] == "thaniya-stats"
+		assert jStats["magic"]["magic"] == "thaniya-client-stats"
 		jData = jStats["data"]
 		assert jData["bSuccess"]
 
