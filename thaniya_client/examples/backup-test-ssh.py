@@ -10,9 +10,9 @@ from thaniya_client import *
 
 # define the server's backup parameters
 
-REMOTE_USERNAME = "woodoo"
-REMOTE_HOST = "192.168.10.100"
-REMOTE_DESTINATION_BASE_PATH = "/mounts/phy/sda1/BACKUPS-THANIYA/woodoo"
+REMOTE_USERNAME = "someuser"
+REMOTE_HOST = "somehost"
+REMOTE_DESTINATION_BASE_PATH = "/path/to/backup/main"
 REMOTE_PORT = 22
 
 
