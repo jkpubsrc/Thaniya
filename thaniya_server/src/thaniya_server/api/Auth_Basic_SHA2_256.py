@@ -9,6 +9,7 @@ import collections
 import jk_typing
 import jk_utils
 
+from thaniya_common.utils import APIPassword
 from ..usermgr.BackupUser import BackupUser
 from ._auth_common import _Resp, _checkBytesEqual
 
@@ -59,14 +60,16 @@ class Auth_Basic_SHA2_256(object):
 		serverRandDataBytes = serverData["randBytes"]			# Bytes
 		assert isinstance(serverRandDataBytes, jk_utils.Bytes)
 
-		bytesPwd = jk_utils.Bytes(backupUser.uploadPwd)
+		apiPwd = backupUser.uploadPwd
+		if apiPwd is None:
+			raise Exception("User '" + backupUser.userName + "' has no API password!")
 
 		clientBytesHashed = jk_utils.Bytes(clientResponseData["hashed"])
 		#print("clientBytesHashed =", clientBytesHashed)
 
 		h = hashlib.sha256()
 		h.update(bytes(serverRandDataBytes))
-		h.update(bytes(bytesPwd))
+		h.update(bytes(apiPwd))
 		serverBytesHashed = jk_utils.Bytes(h.digest())
 		#print("serverBytesHashed =", serverBytesHashed)
 		#print("length =", len(bytes(serverBytesHashed)))

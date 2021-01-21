@@ -4,6 +4,7 @@
 
 
 from thaniya_client import *
+from thaniya_client.tasks import *
 
 
 

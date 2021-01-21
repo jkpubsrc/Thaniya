@@ -16,5 +16,9 @@
 	* improved: GUI button handling
 	* improved: GUI is switched to static css
 
+* 2021-01-21
+	* improved: API password management
+	* improved: Thaniya client implementation
+	* added: Thaniya client examples
 
 

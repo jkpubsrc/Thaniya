@@ -10,6 +10,7 @@ from thaniya_server.app.CLICmdBase import CLICmdBase
 from thaniya_server.app.CLICmdParams import CLICmdParams
 from thaniya_server.usermgr import BackupUser
 from thaniya_server.usermgr import BackupUserManager
+from thaniya_common.utils import APIPassword
 
 from .AppRuntimeServerCtrl import AppRuntimeServerCtrl
 
@@ -72,14 +73,13 @@ class _CLICmd_user_setuploadpwd(CLICmdBase):
 					p.out.print("ERROR: No such user: '{}'".format(userName))
 					return
 
-				hexPwd = str(self.__appRuntime.secureRNG.generateBytes(32))
-				user.uploadPwd = hexPwd
+				user.uploadPwd = APIPassword.generate()
 				user.store()
 
 				bChanged = True
 
 				p.out.print("The following upload password has been set:")
-				p.out.print("\t" + hexPwd)
+				p.out.print("\t" + user.uploadPwd.toBase64Str())
 
 			finally:
 				p.out.print()

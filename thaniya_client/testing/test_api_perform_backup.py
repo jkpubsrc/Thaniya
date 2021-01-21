@@ -22,10 +22,10 @@ with testPrg(__file__, hasDataDir=False, hasTempDir=False) as (ioCtx, dataDirPat
 	driver = ThaniyaBackupDriver(
 		backupConnector = BackupConnector_ThaniyaSFTPMount(),
 		backupConnectorParameters = {
-			"thaniya_serverLogin": cfg["LOGIN"],
-			"thaniya_serverPassword": cfg["PASSWORD"],
-			"thaniya_serverHost": cfg["HOSTNAME"],
-			"thaniya_serverPort": cfg["UPLOAD_HTTP_PORT"],
+			"thaniya_login": cfg["LOGIN"],
+			"thaniya_apiPassword": cfg["PASSWORD"],
+			"thaniya_host": cfg["HOSTNAME"],
+			"thaniya_port": cfg["UPLOAD_HTTP_PORT"],
 		},
 		targetDirStrategy = TargetDirectoryStrategy_StaticDir("upload"),			# all uploads *must* go to this subdirectory!
 	)

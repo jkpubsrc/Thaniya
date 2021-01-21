@@ -9,6 +9,8 @@ import jk_logging
 
 from thaniya_server_archive import AppRuntimeArchiveHttpd
 from thaniya_server.utils import SVGDiskSpaceGraphGenerator
+from thaniya_common.utils import APIPassword
+
 
 
 
@@ -151,7 +153,7 @@ def init_blueprint(app:flask.Flask, appRuntime:AppRuntimeArchiveHttpd, log:jk_lo
 			user = flask_login.current_user,
 			htmlHeadTitle = "Thaniya Archive - /chuploadpasspwd-own",
 			visNavPath = "/ Change backup upload password",
-			newBackupUploadPwd = appRuntime.secureIDGen.generateID(64),
+			newBackupUploadPwd = APIPassword.generate(),
 		)
 	#
 
@@ -226,7 +228,7 @@ def init_blueprint(app:flask.Flask, appRuntime:AppRuntimeArchiveHttpd, log:jk_lo
 
 		# if the above check passes, then we know the user has the right credentials
 		#print("-- User check: okay. Allowing password change.")
-		user.uploadPwd = upload_password
+		user.uploadPwd = APIPassword(upload_password)
 		try:
 			user.store()
 			flask.flash("Your backup upload password has been changed successfully.", "message")

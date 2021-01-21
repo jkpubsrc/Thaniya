@@ -68,25 +68,32 @@ class BackupConnector_ThaniyaSFTPMount(AbstractBackupConnector, BackupConnectorM
 	def initialize(self, ctx:ThaniyaBackupContext, nExpectedNumberOfBytesToWrite:int, parameters:dict):
 		self.__localMountDirPath = ctx.privateTempDir.createDirectory()
 
-		self._thaniya_serverHost = parameters["thaniya_serverHost"]
-		self._thaniya_serverPort = parameters.get("thaniya_serverPort", 22)
-		self._thaniya_serverLogin = parameters["thaniya_serverLogin"]
-		self._thaniya_serverPassword = parameters["thaniya_serverPassword"]
+		self._thaniya_host = parameters["thaniya_host"]
+		self._thaniya_tcpPort = parameters.get("thaniya_port", 22)
+		self._thaniya_login = parameters["thaniya_login"]
+		self._thaniya_apiPassword = parameters["thaniya_apiPassword"]
 
 		with ctx.descend("Contacting Thaniya server to allocate backup slot ...") as log2:
-			con = ThaniyaServerAPIConnectorV1(self._thaniya_serverHost, self._thaniya_serverPort)
-			con.authenticate(self._thaniya_serverLogin, self._thaniya_serverPassword)
+			con = ThaniyaServerAPIConnectorV1(self._thaniya_host, self._thaniya_tcpPort)
+			con.authenticate(self._thaniya_login, self._thaniya_apiPassword)
+
 			jSlotData = con.allocateSlot(nExpectedNumberOfBytesToWrite)
+
 			self._thaniya_uploadSlotID = jSlotData["slotID"]
 			log2.notice("Received: slotID = " + jSlotData["slotID"])
+
 			self._thaniya_uploadHost = jSlotData["ipaddr"]
 			log2.notice("Received: ipaddr = " + jSlotData["ipaddr"])
+
 			self._thaniya_uploadPort = jSlotData["port"]
 			log2.notice("Received: port = " + str(jSlotData["port"]))
+
 			self._thaniya_uploadLogin = jSlotData["login"]
 			log2.notice("Received: login = " + jSlotData["login"])
+
 			self._thaniya_uploadPwd = jSlotData["pwd"]
 			log2.notice("Received: pwd = ....")
+
 			self._thaniya_uploadMountDirPath = jSlotData["mountDir"]
 			log2.notice("Received: mountDir = " + jSlotData["mountDir"])
 
@@ -110,8 +117,8 @@ class BackupConnector_ThaniyaSFTPMount(AbstractBackupConnector, BackupConnectorM
 
 		try:
 			with ctx.log.descend("Signaling '{}' to Thaniya server ...".format("error" if ctx.hasError else "success")) as log2:
-				con = ThaniyaServerAPIConnectorV1(self._thaniya_serverHost, self._thaniya_serverPort)
-				con.authenticate(self._thaniya_serverLogin, self._thaniya_serverPassword)
+				con = ThaniyaServerAPIConnectorV1(self._thaniya_host, self._thaniya_tcpPort)
+				con.authenticate(self._thaniya_login, self._thaniya_apiPassword)
 				con.uploadCompleted(self._thaniya_uploadSlotID, not ctx.hasError)
 		except:
 			# swallow any exception; it has been logged anyway; we need to contiue;

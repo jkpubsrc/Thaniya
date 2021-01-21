@@ -9,7 +9,7 @@ import collections
 import jk_typing
 import jk_utils
 
-
+from thaniya_common.utils import APIPassword
 
 
 
@@ -24,9 +24,9 @@ class Auth_Basic_SHA2_256(object):
 	################################################################################################################################
 
 	@jk_typing.checkFunctionSignature()
-	def __init__(self, userName:str, password:str):
+	def __init__(self, userName:str, password:APIPassword):
 		self.__userName = userName
-		self.__bytesPwd = jk_utils.Bytes(password)
+		self.__apiPwd = password
 	#
 
 	################################################################################################################################
@@ -49,12 +49,12 @@ class Auth_Basic_SHA2_256(object):
 
 		h = hashlib.sha256()
 		h.update(bytes(serverRandDataBytes))
-		h.update(bytes(self.__bytesPwd))
+		h.update(bytes(self.__apiPwd))
 		pwdHashedBytes = jk_utils.Bytes(h.digest())
 
 		return {
 			"asid": asid,
-			"hashed": str(pwdHashedBytes),
+			"hashed": str(pwdHashedBytes),					# this will convert the data to hex
 		}
 	#
 

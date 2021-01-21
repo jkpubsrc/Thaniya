@@ -30,6 +30,7 @@ from .TargetDirectoryStrategy_None import TargetDirectoryStrategy_None
 from .TargetDirectoryStrategy_StaticDir import TargetDirectoryStrategy_StaticDir
 from .TargetDirectoryStrategy_DateDefault import TargetDirectoryStrategy_DateDefault
 
+from .ThaniyaClientCfg import ThaniyaClientCfg
 from .ThaniyaFactory import ThaniyaFactory
 
 

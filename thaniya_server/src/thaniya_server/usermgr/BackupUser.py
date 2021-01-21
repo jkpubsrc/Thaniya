@@ -5,6 +5,10 @@
 import jk_prettyprintobj
 from jk_utils.typed import TypedList
 
+from thaniya_common.utils import APIPassword
+
+
+
 
 
 
@@ -18,7 +22,7 @@ class BackupUser(jk_prettyprintobj.DumpMixin):
 	# @field		bool enabled			Is the user enabled? If not logins are prohibited.
 	# @field		str comment				A comment field for administrators. Currently unused.
 	# @field		str role				A role field. Currently unused.
-	# @field		str uploadPwd			If set this contains an extra password unhashed and in plaintext that
+	# @field		APIPassword uploadPwd	If set this contains an extra password unhashed and in plaintext that
 	#										clients may use to connect to the API and perform an upload.
 	# @field		str[] supervises		Specifies other users this user might supervise.
 
@@ -35,7 +39,7 @@ class BackupUser(jk_prettyprintobj.DumpMixin):
 		self.enabled = False
 		self.comment = None
 		self.role = None
-		self.uploadPwd = None
+		self.__uploadPwd = None
 		self.supervises = None
 
 		#self.backup_accountName = None
@@ -46,6 +50,20 @@ class BackupUser(jk_prettyprintobj.DumpMixin):
 	################################################################################################################################
 	## Flask Properties
 	################################################################################################################################
+
+	@property
+	def uploadPwd(self) -> APIPassword:
+		return self.__uploadPwd
+	#
+
+	@uploadPwd.setter
+	def uploadPwd(self, value):
+		if value is None:
+			self.__uploadPwd = None
+		else:
+			assert isinstance(value, APIPassword)
+			self.__uploadPwd = value
+	#
 
 	#
 	# Used by flask_login:
@@ -103,7 +121,7 @@ class BackupUser(jk_prettyprintobj.DumpMixin):
 
 	@property
 	def canUpload(self) -> bool:
-		return bool(self.uploadPwd)
+		return bool(self.__uploadPwd)
 	#
 
 	################################################################################################################################
@@ -161,7 +179,9 @@ class BackupUser(jk_prettyprintobj.DumpMixin):
 		self.enabled = jData.get("enabled")
 		self.comment = jData.get("comment")
 		self.role = jData.get("role")
-		self.uploadPwd = jData.get("uploadPwd")
+		self.__uploadPwd = None
+		if jData.get("uploadPwd"):
+			self.__uploadPwd = APIPassword(jData["uploadPwd"])
 		self.supervises = TypedList(items=jData.get("supervises"), dataType=str)
 
 		#self.backup_accountName = jData.get("backup_accountName")
@@ -177,7 +197,7 @@ class BackupUser(jk_prettyprintobj.DumpMixin):
 			"enabled": self.enabled,
 			"comment": self.comment,
 			"role": self.role,
-			"uploadPwd": self.uploadPwd,
+			"uploadPwd": self.__uploadPwd.toBase64Str() if self.__uploadPwd else None,
 			"supervises": self.supervises,
 
 			#"backup_accountName": self.backup_accountName,

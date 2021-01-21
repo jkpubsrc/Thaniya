@@ -9,6 +9,7 @@ import jk_json
 
 
 
+from thaniya_common.utils import APIPassword
 from .Auth_Basic_SHA2_256 import Auth_Basic_SHA2_256
 
 
@@ -85,7 +86,14 @@ class ThaniyaServerAPIConnectorV1(object):
 		self.__performPOSTRequest("noopAuth", {})
 	#
 
-	def authenticate(self, userName:str, password:str):
+	def authenticate(self, userName:str, password:typing.Union[APIPassword,str]):
+		if isinstance(password, str):
+			password = APIPassword(password)
+		elif isinstance(password, APIPassword):
+			pass
+		else:
+			raise TypeError(str(type(password)))
+
 		a = Auth_Basic_SHA2_256(userName, password)
 
 		r = self.__performPOSTRequest("auth1", {
