@@ -97,7 +97,14 @@ class ThaniyaClientCfg(AbstractAppCfg):
 		]
 		for cfgFilePath in cfgFilePathCandidates:
 			if os.path.isfile(cfgFilePath):
-				return ThaniyaClientCfg.loadFromFile(cfgFilePath)
+				ret = ThaniyaClientCfg.loadFromFile(cfgFilePath)
+
+				# ensure that this file will always be private
+				iFileMode = jk_utils.ChModValue(userR=True, userW=True).toInt()
+				os.chmod(cfgFilePath, iFileMode)
+
+				return ret
+
 		raise Exception("No configuration file found!")
 	#
 
