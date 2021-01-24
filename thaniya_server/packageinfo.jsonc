@@ -5,7 +5,7 @@
 	},
 	"meta": {
 		"name": "thaniya_server",
-		"version": "0.2021.1.20.1",
+		"version": "0.2021.1.25",
 		"packageClass": "python-module",
 		"language": "python3",
 		"development_status": "alpha",
@@ -26,6 +26,7 @@
 			"flask",
 			"flask_login",
 			"thaniya_common",
+			"Babel",
 		],
 		"python_packages_dev": [
 		],

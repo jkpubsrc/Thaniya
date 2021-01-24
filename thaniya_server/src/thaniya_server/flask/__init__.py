@@ -1,6 +1,6 @@
 ﻿
 
-__version__ = "0.2021.1.20.1"
+__version__ = "0.2021.1.25"
 
 
 
@@ -17,6 +17,7 @@ from .FlaskFilter_tagsColoredToStr import FlaskFilter_tagsColoredToStr
 from .FlaskFilter_tagsToStr import FlaskFilter_tagsToStr
 from .FlaskFilter_toStr import FlaskFilter_toStr
 from .FlaskFilter_formatTime import FlaskFilter_formatTime
+from .FlaskFilter_formatDateHR import FlaskFilter_formatDateHR
 
 
 
@@ -25,6 +26,7 @@ ALL_FLASK_FILTER_CLASSES = [
 	FlaskFilter_boolToYesNo,
 	FlaskFilter_formatBytes,
 	FlaskFilter_formatDate,
+	FlaskFilter_formatDateHR,
 	FlaskFilter_formatDateTime,
 	FlaskFilter_formatDateTimeHRAge,
 	FlaskFilter_formatTime,

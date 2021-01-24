@@ -23,7 +23,8 @@
 	* improved: removed redundant code from former refactoring
 	* fixed: ambiguos configuration file implementations
 
-
+* 2021-01-25
+	* added: Flask filter "formatDateHR" with locale support
 
 
 
