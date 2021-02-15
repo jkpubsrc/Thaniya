@@ -47,7 +47,7 @@ setup(
 		"thaniya_server.flask",
 		"thaniya_server.jobs",
 	],
-	version = "0.2021.1.25",
+	version = "0.2021.2.15",
 	zip_safe = False,
 	long_description = readme(),
 	long_description_content_type="text/markdown",

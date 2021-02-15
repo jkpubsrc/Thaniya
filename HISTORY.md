@@ -26,7 +26,8 @@
 * 2021-01-25
 	* added: Flask filter "formatDateHR" with locale support
 
-
+* 2021-02-15
+	* bugfix: Fixed datetime bug in FlaskFilter_formatDateHR
 
 
 

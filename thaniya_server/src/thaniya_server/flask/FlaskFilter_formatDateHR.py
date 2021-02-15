@@ -22,14 +22,14 @@ class FlaskFilter_formatDateHR(AbstractFlaskTemplateFilter):
 		if value is None:
 			return ""
 
-		print("> FlaskFilter_formatDateHR ::", repr(locale), bool(locale))
+		#print("> FlaskFilter_formatDateHR ::", repr(locale), bool(locale))
 
 		if isinstance(value, str):
 			t = datetime.datetime.strptime(value, "%Y-%m-%d")
 			if locale:
 				return format_date(t, format="long", locale=locale)
 			else:
-				return t.dateTime.strftime("%Y-%m-%d")
+				return t.strftime("%Y-%m-%d")
 		elif isinstance(value, (int, float)):
 			t = jk_utils.TimeStamp.parse(value)
 			if locale:

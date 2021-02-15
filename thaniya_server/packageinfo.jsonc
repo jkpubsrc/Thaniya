@@ -5,7 +5,7 @@
 	},
 	"meta": {
 		"name": "thaniya_server",
-		"version": "0.2021.1.25",
+		"version": "0.2021.2.15",
 		"packageClass": "python-module",
 		"language": "python3",
 		"development_status": "alpha",
